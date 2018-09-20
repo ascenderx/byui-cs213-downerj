@@ -4,7 +4,6 @@ body {
 
 .banner-top {
     padding: 20px 0px 10px 0px;
-    width: 100%;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
@@ -16,18 +15,33 @@ body {
 }
 
 .content-top {
-    width: 100%;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-    position: fixed;
-    top: 50px;
-    left: 0;
+    margin-top: 80px;
+}
+
+.section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: #eff;
+    border: 1px solid #678;
+    padding: 10px;
+}
+
+.header, .section-header {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
 }
 
 .header {
-    font-family: 'Helvetica', sans-serif;
     font-size: 24px;
+}
+
+.section-header {
+    font-size: 20px;
 }
 
 .center-text {
@@ -39,10 +53,41 @@ ul {
     padding: 0;
 }
 
+ul li {
+    margin-bottom: 10px;
+}
+
 a {
     text-decoration: none;
 }
 
 a:hover, a:focus {
     color: #0af;
+}
+
+.fill {
+    width: 100%;
+}
+
+.most {
+    width: 90%;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote {
+    font-family: 'Palatino', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.quote-source {
+    text-align: right;
 }

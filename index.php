@@ -7,12 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     </head>
     <body>
-        <div class="banner-top center-text">
+        <div class="banner-top center-text fill">
             <span class="header">CS 213 Assignments</span>
+            <br />
+            Brigham Young University &ndash; Idaho
         </div>
-        <div class="content-top">
+        <div class="content-top fill">
             <ul class="center-text">
-                <li><a href="week02/index.html">Week 02</a></li>
+                <li><a href="week02/index.html">Week 02</a><br /><sup>My WebDen</sup></li>
                 <li><a href="week03/index.html">Week 03</a></li>
                 <li><a href="week04/index.html">Week 04</a></li>
                 <li><a href="week05/index.html">Week 05</a></li>

@@ -1,0 +1,48 @@
+body {
+    font-family: 'Verdana', sans-serif;
+}
+
+.banner-top {
+    padding: 20px 0px 10px 0px;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    background-color: #adf;
+    border-bottom: 3px solid #678;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content-top {
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    position: fixed;
+    top: 50px;
+    left: 0;
+}
+
+.header {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #0af;
+}

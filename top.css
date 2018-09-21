@@ -1,5 +1,6 @@
 body {
     font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .banner-top {
@@ -21,6 +22,12 @@ body {
     margin-top: 80px;
 }
 
+@media (max-width: 800px) {
+    .content-top {
+        padding-top: 50px;
+    }
+}
+
 .section {
     width: 50%;
     margin-left: auto;
@@ -29,6 +36,12 @@ body {
     background-color: #eff;
     border: 1px solid #678;
     padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .section {
+        width: 90%;
+    }
 }
 
 .header, .section-header {
@@ -90,4 +103,19 @@ blockquote {
 
 .quote-source {
     text-align: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+td, th {
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    td, th {
+        font-size: 10px;
+    }
 }

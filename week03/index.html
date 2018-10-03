@@ -6,12 +6,47 @@
         <base href="~" />
         <link rel="stylesheet" href="../top.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <style>
+            .u-button {
+                box-shadow: 0 5px #777;
+                display: inline-block;
+                background-color: #aaa;
+                padding: 10px;
+                margin: 10px;
+                text-align: center;
+            }
+            
+            .u-button-wide {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .u-button:hover, .u-button:focus {
+                background-color: #ccc;
+                box-shadow: 0 5px #999;
+                cursor: pointer;
+            }
+            
+            .u-stuff-container {
+                max-width: 500px;
+                margin: 10px auto 10px auto;
+            }
+        </style>
     </head>
     <body>
         <div class="banner-top center-text fill">
             <span class="header">E-Commerce</span>
             <br />
-            Jimmy Downer
+            Welcome!
+        </div>
+        
+        <div class="content-top fill">
+            <div class="u-stuff-container">
+                <div class="u-button u-button-wide">
+                    Press
+                </div>
+            </div>
         </div>
     </body>
 </html>

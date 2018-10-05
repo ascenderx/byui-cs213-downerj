@@ -5,10 +5,14 @@ body {
   background-attachment: fixed;
 }
 
-.header, .content {
+.meta-wrapper {
   max-width: 800px;
-  padding: 10px;
   margin: 0 auto 0 auto;
+}
+
+.header, .content {
+  max-width: 100%;
+  padding: 10px;
 }
 
 .header {
@@ -72,4 +76,16 @@ a:hover, a:focus {
 .author {
   font-family: "Trebuchet MS", "Geneva", sans-serif;
   font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .meta-wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  .code-block, .demo-block {
+    width: 90%;
+  }
 }

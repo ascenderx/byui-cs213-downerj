@@ -6,58 +6,66 @@
     <link rel="stylesheet" href="./desc.css" />
   </head>
   <body>
-    <div class="header">
-      CSS Overflow
-    </div>
-    <div class="content">
-      The <code>overflow</code> property clips the content within an element based on the current
-      dimensions, adding optional behavior such as scrolling.
-      <br /><br />
-      According to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN
-      documentation</a>, the following possible configurations are possible:
-      <div class="code-block">
-        &rsaquo; visible<br />
-        &rsaquo; hidden<br />
-        &rsaquo; scroll<br />
-        &rsaquo; auto<br />
-        &rsaquo; hidden<br />
-        &rsaquo; visible<br />
-      </div>
-      In the following example, the browser will automatically clip the text in any
-      <code>&lt;div&gt;</code> element, which in most cases will cause vertical scrolling:
-      <div class="code-block">
-        div {<br />
-        &nbsp;&nbsp;overflow: auto;<br />
-        }<br />
-      </div>
-      This is demonstrated below:
-      <div class="demo-block">
-        <div style="
-          margin: 10px auto 10px 100px;
-          padding: 20px;
-          max-width: 400px;
-          max-height: 100px;
-          overflow: auto;
-          background-color: #bbf;">
-            Did you ever hear the tragedy of Darth Plagueis The Wise?
-            I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend.
-            Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could
-            use the Force to influence the midichlorians to create life…
-            He had such a knowledge of the dark side that he could even keep the ones he
-            cared about from dying. The dark side of the Force is a pathway to many abilities
-            some consider to be unnatural. He became so powerful… the only thing he was afraid of
-            was losing his power, which eventually, of course, he did. Unfortunately, he taught his
-            apprentice everything he knew, then his apprentice killed him in his sleep. Ironic.
-            He could save others from death, but not himself.<br /><br />
-        </div>
-      </div>
-      For more information, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN
-      documentation</a> or the <a href="https://www.w3schools.com/css/css_overflow.asp">W3Schools
-      reference</a>.
-      <div class="author-block">
-        <span class="author">James Downer</span><br />
-        <a href="https://ascenderx.github.io">ascenderx.github.io</a>
-      </div>
-    </div>
+    <div class="meta-wrapper">
+      <div class="header">
+        CSS Overflow
+      </div> <!-- header -->
+      <div class="content">
+
+        The <code>overflow</code> property clips the content within an element based on the current
+        dimensions, adding optional behavior such as scrolling.
+        <br /><br />
+
+        According to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN
+        documentation</a>, the following possible configurations are possible:
+        <div class="code-block">
+          &rsaquo; visible<br />
+          &rsaquo; hidden<br />
+          &rsaquo; scroll<br />
+          &rsaquo; auto<br />
+          &rsaquo; hidden<br />
+          &rsaquo; visible<br />
+        </div> <!-- code-block -->
+
+        In the following example, the browser will automatically clip the text in any
+        <code>&lt;div&gt;</code> element, which in most cases will cause vertical scrolling:
+        <div class="code-block">
+          div {<br />
+          &nbsp;&nbsp;overflow: auto;<br />
+          }<br />
+        </div> <!-- code-block -->
+
+        This is demonstrated below:
+        <div class="demo-block">
+          <div style="
+            margin: 10px auto 10px 100px;
+            padding: 20px;
+            max-width: 400px;
+            max-height: 100px;
+            overflow: auto;
+            background-color: #bbf;">
+              Did you ever hear the tragedy of Darth Plagueis The Wise?
+              I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend.
+              Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could
+              use the Force to influence the midichlorians to create life…
+              He had such a knowledge of the dark side that he could even keep the ones he
+              cared about from dying. The dark side of the Force is a pathway to many abilities
+              some consider to be unnatural. He became so powerful… the only thing he was afraid of
+              was losing his power, which eventually, of course, he did. Unfortunately, he taught his
+              apprentice everything he knew, then his apprentice killed him in his sleep. Ironic.
+              He could save others from death, but not himself.<br /><br />
+          </div>
+        </div> <!-- demo-block -->
+
+        For more information, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN
+        documentation</a> or the <a href="https://www.w3schools.com/css/css_overflow.asp">W3Schools
+        reference</a>.
+        <div class="author-block">
+          <span class="author">James Downer</span><br />
+          <a href="https://ascenderx.github.io">ascenderx.github.io</a>
+        </div> <!-- author-block -->
+
+      </div> <!-- content -->
+    </div> <!-- meta-wrapper -->
   </body>
 </html>

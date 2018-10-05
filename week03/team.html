@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <style> /* #0 Adrian*/
+    <!-- #################################### ADRIAN #################################### -->
+    <style> /* #0 Adrian */
+      body{
+          padding-left: 10%;
+          padding-right: 10%;
+      }
+      #title{
+          background-color: #673ab7;
+          padding: 20px;
+          color: #fff;
+      }
+      #menuBarList{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+      }
+      li{
+          float:left;
+          padding: 10px;
+          color: #fff;
+          text-align: center;
+      }
+      #text{
+          font-family: sans-serif;
+      }
     </style>
-    <style> /* #1 Carol*/
+    
+    <!-- #################################### CAROL #################################### -->
+    <style> /* #1 Carol */
+       body { font-size:16px; }
     </style>
-    <style> /* #2 Brian*/
+    
+    <!-- #################################### BRIAN #################################### -->
+    <style> /* #2 Brian */
+       body { font-size:12px; }
     </style>
-    <style> /* #3 Jimmy*/
+    
+    <!-- #################################### JIMMY #################################### -->
+    <style> /* #3 Jimmy */
       @font-face {
         font-family: 'Fira Mono';
         font-style: normal;
@@ -157,6 +191,11 @@
       }
     </style>
     
+    <!-- #################################### EDGAR #################################### -->
+    <style> /* #1 Edgar */
+       body { font-size:16px; }
+    </style>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Week 03 : CSS</title>
    </head>
@@ -173,6 +212,7 @@
               <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
               <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
               <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+              <li class="menuBarItem" onclick="applyStyle(4)">Stylesheet 5</li>
               <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
             </ul>
           </div> <!-- menuBar -->
@@ -184,15 +224,16 @@
               <a href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
               <a href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
               <a href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
-              <a href="#" onclick="applyStyle(3)">Stylesheet 4</a>.
+              <a href="#" onclick="applyStyle(3)">Stylesheet 4</a>,
+              <a href="#" onclick="applyStyle(4)">Stylesheet 5</a>.
             </p>
              <h1>Instructions</h1>
             <p>Please modify this page to include a description of each stylesheet, including anything clever that 
                     you did to achieve a given effect. Please also include the contributors to a given stylesheet.</p>
-            <p class="student">Adrian's Description</p>
-            <p class="student">Carol's Description</p>
-            <p class="student">Brian's Description</p>
-            <p class="student">Jimmy's Description<br />
+            <p class="student">Adrian&#39;s Description</p>
+            <p class="student">Carol&#39;s Description</p>
+            <p class="student">Brian&#39;s Description</p>
+            <p class="student">Jimmy&#39;s Description<br />
             <sup>
               I added a high-contrast theme with some outlandish effects. I rotated the entire <code>.document</code> division
               by 5&deg; counter-clockwise as well as made every first letter large and a different color.
@@ -202,6 +243,7 @@
               certain max width, forcing vertical scrolling. I also changed the list dot to Armenian letters.
             </sup>
             </p>
+            <p class="student">Edgar&#39;s Description</p>
               
          </div> <!-- text -->
          <div id="sidebar">
@@ -216,7 +258,7 @@
       
       <script>
         window.addEventListener('load', function() {
-          applyStyle(3);
+          applyStyles(3);
         });
 
         // DISABLE STYLES: This function turns off the four stylesheets
@@ -226,7 +268,9 @@
           document.styleSheets[1].disabled = true;
           document.styleSheets[2].disabled = true;
           document.styleSheets[3].disabled = true;
+          document.styleSheets[4].disabled = true;
         }
+        
         // APPLY STYLES: This function turns off all four stylesheets, then turns one back on
         function applyStyle(i)
         {

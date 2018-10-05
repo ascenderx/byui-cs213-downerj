@@ -1,32 +1,28 @@
 body {
   font-family: 'Verdana', sans-serif;
   font-size: 16px;
+  background: url('../assets/starstuff.jpg');
+  background-attachment: fixed;
 }
 
 .header, .content {
-  width: 100%;
-  /* margin: 0 auto 10px auto; */
+  max-width: 800px;
   padding: 10px;
+  margin: 0 auto 0 auto;
 }
 
 .header {
-  background-color: #00c;
+  background-color: #44f;
   color: #fff;
-  border-bottom: 4px solid #aaf;
+  border-bottom: 4px solid #007;
   padding-top: 30px;
   font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
   font-weight: bold;
   font-size: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .content {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  max-width: 1200px;
+  background-color: rgba(220, 240, 255, 80%);
 }
 
 code, .code, .code-block {
@@ -36,7 +32,7 @@ code, .code, .code-block {
 code, .code {
   padding-left: 5px;
   padding-right: 5px;
-  background-color: #cdf;
+  background-color: rgba(200, 255, 255, 70%);
   border-radius: 3px;
 }
 
@@ -59,11 +55,12 @@ a {
 }
 
 a:hover, a:focus {
-  text-decoration: underline;
+  color: #ff0;
 }
 
 .demo-block {
-  border: 2px solid #aac
+  background-color: #fff;
+  border: 2px solid #77c;
 }
 
 .author-block {

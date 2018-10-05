@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>CS 213 : CSS Overflow</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./desc.css" />
+  </head>
+  <body>
+    <div class="header">
+      CSS Maximum Width
+    </div>
+    <div class="content">
+      The <code>max-width</code> property instructs an element to restrict its width to within a
+      specified (or computed) value. This is used in creating responsive webpages so that certain
+      elements that would otherwise be very wide will instead fit inside of a mobile viewport.
+      <br /><br />
+      According to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width">MDN
+      documentation</a>, the following possible configurations are possible:
+      <div class="code-block">
+        &rsaquo; <em>&lt;length value&gt;</em><br />
+        &rsaquo; <em>&lt;percent value&gt;</em><br />
+        &rsaquo; none<br />
+        &rsaquo; max-content<br />
+        &rsaquo; min-content<br />
+        &rsaquo; fit-content<br />
+        &rsaquo; fill-available<br />
+      </div>
+      In the following example, the browser will expand every <code>&lt;div&gt;</code>
+      with the class <code>constrained</code> to no wider than 1000 pixels.
+      <div class="code-block">
+        div.constrained {<br />
+        &nbsp;&nbsp;max-width: 1000px;<br />
+        }<br />
+      </div>
+      This is demonstrated below. The box's maximum width is wider than its container, 
+      so it is constrained to that smaller width
+      (the effect is best seen when comparing between desktop and mobile views):
+      <div class="demo-block">
+        <div style="
+          margin: 10px auto 10px 100px;
+          padding: 20px;
+          max-width: 1000px;
+          background-color: #bbf;">
+            I am a wide box.
+        </div>
+      </div>
+      For more information, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width">MDN
+      documentation</a> or the <a href="https://www.w3schools.com/css/css_max-width.asp">W3Schools
+      reference</a>.
+      <div class="author-block">
+        <span class="author">James Downer</span><br />
+        <a href="https://ascenderx.github.io">ascenderx.github.io</a>
+      </div>
+    </div>
+  </body>
+</html>

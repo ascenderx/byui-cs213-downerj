@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>CS 213 : CSS Media Queries</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./desc.css" />
+  </head>
+  <body>
+    <div class="meta-wrapper">
+      <div class="header">
+        CSS Media Queries
+      </div> <!-- header -->
+      <div class="content">
+
+        The <code>@media()</code> directive instructs the browser to render certain elements
+        with a different style given a certain condition of the viewport. For example, the browser
+        can detect when a screen is a certain size and render the CSS differently based on the
+        media query specified by the web page's stylesheet(s).
+        <br /><br />
+        
+        According to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDN
+        documentation</a>, there are numerous keywords and values that are considered valid syntax
+        for media queries. Some examples that given at MDN are:
+        <div class="code-block">
+          &rsaquo; @media print&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          /* used for printers */
+          <br />
+          &rsaquo; @media screen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          /* used for mobile & desktop screens */
+          <br />
+          &rsaquo; @media screen, print&nbsp;&nbsp;&nbsp;
+          /* used for screens and for printing */
+          <br />
+          &rsaquo; @media (width &lt;= 700px)
+          /* used for any viewport less than 700px wide */
+          <br />
+        </div> <!-- code-block -->
+        The code that follows the query signature consists of the <em>new</em> styles to applied.
+        <br /><br />
+
+        In the following example, the browser will render every <code>&lt;div&gt;</code> of class
+        <code>big-block</code> with a width of 500 pixels unless the viewport's width is 700 pixels
+        or less, in which case it will ensure that the block's width takes up 95% of the containing
+        element's width:
+        <div class="code-block">
+          div.big-block {<br />
+          &nbsp;&nbsp;width: 500px;<br />
+          }<br />
+          <br />
+          @media (max-width: 700px) {<br />
+          &nbsp;&nbsp;div.big-block {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;width: 95%;<br />
+          &nbsp;&nbsp;}<br />
+          }<br />
+        </div> <!-- code-block -->
+
+        This is demonstrated below (the effect is best seen when comparing desktop and
+        mobile views):
+        <div class="demo-block">
+          <style>
+            div.big-block {
+              margin-left: auto;
+              margin-right: auto;
+              background-color: #bbf;
+              text-align: center;
+              padding: 10px;
+              width: 500px;
+            }  
+
+            @media (max-width: 700px) {
+              div.big-block {
+                width: 95%;
+              }
+            }
+          </style>
+          <div class="big-block">
+              I am a wide box.
+          </div>
+        </div> <!-- demo-block -->
+
+        For more information, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDN
+        documentation</a> or the <a href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp">W3Schools
+        reference</a>.
+        <div class="author-block">
+          <span class="author">James Downer</span><br />
+          <a href="https://ascenderx.github.io">ascenderx.github.io</a>
+        </div> <!-- author-block -->
+
+      </div> <!-- content -->
+    </div> <!-- meta-wrapper -->
+  </body>
+</html>

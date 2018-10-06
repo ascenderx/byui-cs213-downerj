@@ -1,25 +1,35 @@
 body {
     font-family: 'Verdana', sans-serif;
     font-size: 16px;
+    background-color: #000;
+}
+
+.meta-wrapper {
+    max-width: 800px;
+    margin: 10px auto 10px auto;
+}
+
+.banner-top, .content-top, .button {
+    border-radius: 5px;
 }
 
 .banner-top {
-    padding: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
     background-color: #adf;
-    border-bottom: 3px solid #678;
-    position: fixed;
-    top: 0;
-    left: 0;
+    box-shadow: 0 5px #79b;
 }
 
 .content-top {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-    margin-top: 80px;
+    margin: 10px auto 10px auto;
+    background-color: #57a;
+    padding: 10px;
+    box-shadow: 0 5px #257;
 }
 
 @media (max-width: 800px) {
@@ -29,7 +39,7 @@ body {
 }
 
 .section {
-    width: 50%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -70,12 +80,24 @@ ul li {
     margin-bottom: 10px;
 }
 
+a, a:visited {
+    color: #05f;
+}
+
 a {
     text-decoration: none;
 }
 
 a:hover, a:focus {
     color: #0af;
+}
+
+a.a-dark, a.a-dark:visited {
+    color: #0ff;
+}
+
+a.a-dark:hover, a.a-dark:focus {
+    color: #fff;
 }
 
 .fill {
@@ -112,6 +134,25 @@ img {
 
 td, th {
     font-size: 12px;
+}
+
+.button {
+    background-color: #9ef;
+    padding: 10px;
+    max-width: 400px;
+    margin: 10px auto 10px auto;
+    box-shadow: 0 5px #6ad;
+    text-align: center;
+}
+
+.button:hover, .button:focus {
+    background-color: #cff;
+    cursor: pointer;
+    color: #0af;
+}
+
+hr.hr-dark {
+    border: 2px solid #7ef; 
 }
 
 @media (max-width: 800px) {

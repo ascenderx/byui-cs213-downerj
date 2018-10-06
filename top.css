@@ -9,8 +9,9 @@ body {
     margin: 10px auto 10px auto;
 }
 
-.banner-top, .content-top, .button {
+.banner-top, .content-top, .button, .button-2 {
     border-radius: 5px;
+    font-size: 16px;
 }
 
 .banner-top {
@@ -30,6 +31,7 @@ body {
     background-color: #57a;
     padding: 10px;
     box-shadow: 0 5px #257;
+    color: #0ff;
 }
 
 @media (max-width: 800px) {
@@ -44,8 +46,10 @@ body {
     margin-right: auto;
     margin-bottom: 20px;
     background-color: #eff;
-    border: 1px solid #678;
     padding: 10px;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 5px #aaf;
 }
 
 @media (max-width: 800px) {
@@ -100,10 +104,6 @@ a.a-dark:hover, a.a-dark:focus {
     color: #fff;
 }
 
-.fill {
-    width: 100%;
-}
-
 .most {
     width: 90%;
 }
@@ -132,20 +132,51 @@ img {
     height: auto;
 }
 
-td, th {
+table.spec-table th, table.spec-table td {
     font-size: 12px;
 }
 
-.button {
+.fill-table {
+    width: 400px;
+}
+
+input[type=text] {
+    display: inline-block;
+    background-color: #000;
+    color: #0ff;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    font-family: monospace;
+}
+
+input[type=text]:hover {
+    background-color: #057;
+}
+
+input[type=text]:focus {
+    background-color: #079;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+button, .button, .button-2 {
     background-color: #9ef;
     padding: 10px;
     max-width: 400px;
     margin: 10px auto 10px auto;
     box-shadow: 0 5px #6ad;
     text-align: center;
+    border: none;
 }
 
-.button:hover, .button:focus {
+.fill {
+    width: 100%;
+}
+
+.button:hover, .button:focus, .button-2:hover, .button-2:focus {
     background-color: #cff;
     cursor: pointer;
     color: #0af;
@@ -153,6 +184,10 @@ td, th {
 
 hr.hr-dark {
     border: 2px solid #7ef; 
+}
+
+.attach-left {
+    padding-left: 0;
 }
 
 @media (max-width: 800px) {

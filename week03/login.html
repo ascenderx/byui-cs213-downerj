@@ -5,11 +5,37 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="../top.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <style>
+            .button {
+                font-family: monospace;
+                font-weight: default;
+                font-size: 10px;
+            }
+            
+            div.section:first-child {
+                background-color: #fa0;
+                box-shadow: 0 5px #a80;
+            }
+            
+            *:first-letter {
+                color: #a70;
+            }
+            
+            .section {
+                margin: 50px auto 20px auto;
+            }
+            
+            img {
+                border: 3px solid #fa0;
+            }
+        </style>
+        <link rel="stylesheet" href="./yeet.css" />
     </head>
     <body>
         <div class="meta-wrapper">
         <div class="banner-top center-text fill">
-            <span class="header">Downtech</span>
+            <!-- EXAMPLE OF INLINE STYLE -->
+            <span class="header" style="font-size: 30px; font-variant: small-caps; text-shadow: 3px 3px #09b;">Downtech LLC</span>
             <br />
             Welcome!
         </div>
@@ -20,6 +46,7 @@
         </div>
         
         <div class="content-top fill">
+            <div class="section">
             <form id="frm-login" action="">
                 <table class="centered fill-table">
                     <tr>
@@ -35,6 +62,7 @@
                     </tr>
                 </table>
             </form>
+            </div>
         </div>
         </div>
     </body>

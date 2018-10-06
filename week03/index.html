@@ -6,13 +6,36 @@
         <link rel="stylesheet" href="../top.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <style>
+            .button {
+                font-family: 'Courier New', sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+            }
             
+            div.section:first-child {
+                background-color: #faa;
+                box-shadow: 0 5px #f77;
+            }
+            
+            *:first-letter {
+                color: #f00;
+            }
+            
+            .section {
+                margin: 30px auto 10px auto;
+            }
+            
+            img {
+                border: 4px solid #f00;
+            }
         </style>
+        <link rel="stylesheet" href="./yeet.css" />
     </head>
     <body>
         <div class="meta-wrapper">
         <div class="banner-top center-text fill">
-            <span class="header">Downtech</span>
+            <!-- EXAMPLE OF INLINE STYLE -->
+            <span class="header" style="font-size: 30px; font-variant: small-caps; text-shadow: 3px 3px #09b;">Downtech LLC</span>
             <br />
             Welcome!
         </div>
@@ -25,16 +48,25 @@
         <div class="content-top fill">
             <div class="section">
                 <div class="header">Purpose</div>
-                Here at Downtech, we aim to provide timely and reliable software solutions to customers
-                around the globe. We specialize in 2D rendering web engines for simulations, mathematics,
-                games and other graphics projects.
+                Here at <abacus>Downtech</abacus>, we <span id="yeet">aim</span> to provide timely and
+                <what>reliable</what> software solutions to <dab>customers</dab>
+                around the globe. We <uhhh>specialize</uhhh> in 2D rendering <blah>web engines for simulations, mathematics,
+                games and other graphics projects<blah>.
             </div>
             <div class="section">
-                <div class="header">Screenshots</div>
+                <div class="header"><get-lost>Screenshots</get-lost></div>
+                <table class="centered fill">
+                    <tr>
+                        <td><img src="./assets/jsaster-demo.png" alt="JS Asteroids" style="min-width: 100px; min-height: 100px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/jssnake-demo.png" alt="JS Snake" style="min-width: 100px; min-height: 100px;"/></td>
+                    </tr>
+                </table>
             </div>
             <div class="section">
                 <div class="header">Demos</div>
-                To demo our software, see the <a href="https://ascenderx.github.io">Ascenderx Github Homepage</a>.
+                To demo our <nork>software<nork>, see the <a href="https://ascenderx.github.io">Ascenderx Github Homepage</a>.
             </div>
         </div>
         </div>

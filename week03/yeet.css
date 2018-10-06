@@ -1,0 +1,41 @@
+body {
+    background-color: #035;
+}
+
+h1, h2, h3, h4, h5, .header {
+    font-family: serif;
+}
+
+#yeet {
+    font-weight: bold;
+    font-family: 'Times';
+}
+
+what {
+    font-style: italic;
+    color: #00a;
+}
+
+blah {
+    text-decoration: underline;
+}
+
+uhhh {
+    text-decoration: line-through;
+}
+
+dab {
+    text-decoration: overline;
+}
+
+nork {
+    text-decoration: underline overline;
+}
+
+abacus {
+    cursor: crosshair;
+}
+
+get-lost {
+    cursor: copy; 
+}

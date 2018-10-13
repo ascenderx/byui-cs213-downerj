@@ -108,6 +108,8 @@ a, a:visited {
   display: inline-block;
   text-align: center;
   padding: 10px;
+  -webkit-transition: background-color 0.5s, color 0.5s; /* Safari */
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .button-link:hover, .button-link:focus {
@@ -127,8 +129,8 @@ a, a:visited {
   /* border-top: 6px solid #888; */
   box-shadow: 5px 5px #666;
   margin: 0 10px 10px 0;
-  -webkit-transition: background-color 0.5s; /* Safari */
-  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s; /* Safari */
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .product-item:hover, .product-item:focus {

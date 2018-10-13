@@ -95,7 +95,7 @@ a, a:visited {
   font-size: 24px;
 }
 
-.company-logo {
+.company-name {
   font-family: 'StormFaze Regular', sans-serif;
   font-size: 60px;
 }
@@ -107,6 +107,12 @@ a, a:visited {
 /**
  * WIDGET STYLES
  **/
+
+.company-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .button-link {
   display: inline-block;

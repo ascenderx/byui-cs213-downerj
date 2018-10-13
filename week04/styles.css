@@ -100,6 +100,10 @@ a, a:visited {
   font-size: 60px;
 }
 
+.pad {
+  padding: 10px;
+}
+
 /**
  * WIDGET STYLES
  **/
@@ -110,6 +114,8 @@ a, a:visited {
   padding: 10px;
   -webkit-transition: background-color 0.5s, color 0.5s; /* Safari */
   transition: background-color 0.5s, color 0.5s;
+  border: none;
+  cursor: pointer;
 }
 
 .button-link:hover, .button-link:focus {
@@ -117,7 +123,21 @@ a, a:visited {
   color: #fff;
 }
 
+.button-wide {
+  min-width: 150px;
+  max-width: 250px;
+}
+
+.button-standalone {
+  background-color: #aaa;
+  box-shadow: 2px 2px #888;
+}
+
 .product-container {
+}
+
+input[type="text"], input[type="password"] {
+  box-shadow: 2px 2px #aaa;
 }
 
 .product-item {
@@ -173,6 +193,14 @@ a, a:visited {
   padding: 10px 0 10px 0;
   margin-bottom: 20px;
   border-bottom: 3px solid #777;
+}
+
+.sub-container {
+  max-width: 400px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 5px;
+  box-shadow: 5px 5px #777;
 }
 
 .footer {

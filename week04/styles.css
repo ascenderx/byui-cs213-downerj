@@ -100,8 +100,21 @@ a, a:visited {
   font-size: 60px;
 }
 
+.company-name-medium {
+  font-family: 'StormFaze Regular', sans-serif;
+  font-size: 30px;
+}
+
 .pad {
   padding: 10px;
+}
+
+a.link-normal {
+  color: #00f;
+}
+
+a.link-normal:hover, a.link-normal:focus {
+  text-decoration: underline;
 }
 
 /**
@@ -112,6 +125,7 @@ a, a:visited {
   position: fixed;
   top: 0;
   left: 0;
+  padding-top: 5px;
 }
 
 .button-link {
@@ -222,4 +236,32 @@ input[type="text"], input[type="password"] {
 
 .footer {
   padding: 10px 0 10px 0;
+}
+
+@media (max-width: 750px) {
+  .company-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .meta-wrapper {
+    margin-top: 100px;
+  }
+
+  .company-name {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .company-name {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 300px) {
+  .meta-wrapper {
+    margin-top: 150px;
+  }
 }

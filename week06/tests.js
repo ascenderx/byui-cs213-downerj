@@ -3,7 +3,7 @@ const AGE_MAX = 118;
 const AGE_DELTA = 1;
 const DATE_MIN = -6847779600000; // 1/1/1753
 const DATE_MAX = +4133919600000; // 12/31/2100
-const NEXT_DAY = 24 * 3600 * 1000; // ~1 day in milliseconds
+const NEXT_DAY = 24 * 3600 * 1000; // 1 day in milliseconds
 const A_INDEX = 'A'.charCodeAt(0);
 
 /**
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
         max: AGE_MAX + 50,
         delta: AGE_DELTA,
         valConverter: (age) => age
-    });//.run(0);
+    }).run(0);
 
     // test dates
     new FieldTest({
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
         max: DATE_MAX + (NEXT_DAY * 20),
         delta: NEXT_DAY,
         valConverter: (time) => new Date(time).toLocaleDateString()
-    });//.run(0);
+    }).run(0);
 
     // test states
     new FieldTest({
@@ -46,5 +46,5 @@ window.addEventListener('load', () => {
             let char1 = (val % 26) + A_INDEX;
             return String.fromCharCode(char0, char1);
         }
-    });//.run(0);
+    }).run(0);
 });

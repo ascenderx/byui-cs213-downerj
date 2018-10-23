@@ -70,7 +70,7 @@ function hideLabel(label) {
 
 /**
  * ON INPUT ELEMENT CHANGE
- * This function serves as a callback for <input>.onchange(). It gets the
+ * This function serves as a callback for <input>.oninput(). It gets the
  * value in the input field, trims it of extra whitespace, and checks it
  * against the corresponding regular expression.
  * If the value is valid, then the corresponding error message disappears;
@@ -128,9 +128,7 @@ window.addEventListener('load', () => {
             // do an initial check on (each) element
             callback();
 
-            // attach (each) element's event handlers and the callback
-            // input.addEventListener('change', callback);
-            // input.addEventListener('blur', callback);
+            // attach (each) element's event handler(s) to the callback
             input.addEventListener('input', callback);
         }
     }

@@ -1,4 +1,3 @@
-// const CHANGE_EVENT = new Event('change');
 const INPUT_EVENT = new Event('input');
 
 /**
@@ -128,7 +127,7 @@ class FieldTest {
     /**
      * FIELD TEST : CALLBACK
      * This function is called once per tick cycle, updating the
-     * given input element and firing a "change" event.
+     * given input element and firing an "input" event.
      */
     _callback() {
         // do nothing if setInterval wasn't called
@@ -183,7 +182,7 @@ class FieldTest {
     stop() {
         if (isDefined(this._interNum)) {
             clearInterval(this._interNum);
-            console.log(`Interval ${this.interNum} stopped`);
+            console.log(`Interval ${this._interNum} stopped (${this._selector}[${this._elemIndex}])`);
             this._interNum = null;
         }
     }

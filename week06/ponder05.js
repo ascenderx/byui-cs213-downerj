@@ -16,10 +16,20 @@ const REGEX_MAP = {
     'u-age': /^(((\d)?(\d))|([1](([0]\d)|([1][0-8]))))$/,
     'u-ssn': /^(\d{3}\-\d{2}\-\d{4})$/,
     'u-card': /^((\d{4}[ ]?){4})$/,
-    'u-date': /./,
+    'u-date': /^(([1-9]|([1][0-2]))\/([1-9]|([1-2]\d)|([3][0-1]))\/((175[3-9])|(17[6-9]\d)|(1[8-9]\d\d)|(20\d\d)|(2100)))$/,
     'u-state': /./,
     'u-money': /./,
 };
+
+/**
+ * IS DEFINED
+ * Checks to see if a value is defined and not null.
+ * @param val The value to check
+ * @returns A boolean
+ */
+function isDefined(val) {
+   return (val !== undefined) && (val !== null);
+}
 
 /**
  * GET ELEMENTS BY CLASS NAME

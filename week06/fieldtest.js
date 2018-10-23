@@ -1,4 +1,5 @@
-const CHANGE_EVENT = new Event('change');
+// const CHANGE_EVENT = new Event('change');
+const INPUT_EVENT = new Event('input');
 
 /**
  * FIELD TEST
@@ -145,7 +146,7 @@ class FieldTest {
         // otherwise, increment the counter and check
         try {
             this._elem.value = this._valConverter(this._v);
-            this._elem.dispatchEvent(CHANGE_EVENT);
+            this._elem.dispatchEvent(INPUT_EVENT);
         } catch (ex) {
             this.stop();
             throw ex;

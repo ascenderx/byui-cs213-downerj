@@ -129,8 +129,9 @@ window.addEventListener('load', () => {
             callback();
 
             // attach (each) element's event handlers and the callback
-            input.addEventListener('change', callback);
-            input.addEventListener('blur', callback);
+            // input.addEventListener('change', callback);
+            // input.addEventListener('blur', callback);
+            input.addEventListener('input', callback);
         }
     }
 });

@@ -1,6 +1,17 @@
 const CHANGE_EVENT = new Event('change');
 
+/**
+ * FIELD TEST
+ * This class wraps a single test on an input field and dispatches
+ * its callback to the window's setInterval(), incrementing values
+ * in succession on a timed loop.
+ * The loop will stop once a maximum value is reached.
+ */
 class FieldTest {
+    /**
+     * FIELD TEST : CONSTRUCTOR
+     * @param obj An object of values used to populate the instance
+     */
     constructor(obj) {
         if (!('className' in obj)) {
             throw `Invalid class selector ${className}`;
@@ -26,52 +37,105 @@ class FieldTest {
         this._delayCounter = null;
     }
 
-    set tick(newTick) {
-        this._tick = newTick;
-    }
-
+    /**
+     * FIELD TEST : GET TICK
+     * This is how long setInterval() waits before firing the internal
+     * callback function again.
+     * @returns The current tick value
+     */
     get tick() {
         return this._tick;
     }
 
-    set min(newMin) {
-        this._min = newMin;
+    /**
+     * FIELD TEST : SET TICK
+     * @param newTick The new tick value
+     */
+    set tick(newTick) {
+        this._tick = newTick;
     }
 
+    /**
+     * FIELD TEST : GET MIN
+     * This is the initial interval value.
+     * @returns The current minimum value
+     */
     get min() {
         return this._min;
     }
 
-    set max(newMax) {
-        this._max = newMax;
+    /**
+     * FIELD TEST : SET MIN
+     * @param newMin The new minimum value
+     */
+    set min(newMin) {
+        this._min = newMin;
     }
 
+    /**
+     * FIELD TEST : GET MAX
+     * This is the value that triggers the end of the loop.
+     * @returns The current maximum value
+     */
     get max() {
         return this._max;
     }
 
-    set delta(newDelta) {
-        this._delta = newDelta;
+    /**
+     * FIELD TEST : SET MAX
+     * @param newMax The new maximum value
+     */
+    set max(newMax) {
+        this._max = newMax;
     }
 
+    /**
+     * FIELD TEST : GET DELTA
+     * This is how much the internal value is changed per tick cycle.
+     * @returns The current delta value
+     */
     get delta() {
         return this._delta;
     }
 
-    set valConverter(newValConverter) {
-        this._valConverter = newValConverter;
+    /**
+     * FIELD TEST : SET DELTA
+     * @param newDelta The new delta value
+     */
+    set delta(newDelta) {
+        this._delta = newDelta;
     }
 
+    /**
+     * FIELD TEST : GET VALUE CONVERTER
+     * The value converter is a user-defined function that determines
+     * how the internal integer will be represented in the input field.
+     * @returns The current value conversion function
+     */
     get valConverter() {
         return this._valConverter;
     }
 
+    /**
+     * FIELD TEST : SET VALUE CONVERTER
+     * @param newValConverter The new value conversion function
+     */
+    set valConverter(newValConverter) {
+        this._valConverter = newValConverter;
+    }
+
+    /**
+     * FIELD TEST : CALLBACK
+     * This function is called once per tick cycle, updating the
+     * given input element and firing a "change" event.
+     */
     _callback() {
         // do nothing if setInterval wasn't called
         if (!isDefined(this._interNum)) {
             return;
         }
 
+        // wait, if necessary
         if (this._delayCounter <= this._startDelay) {
             this._elem.value = '';
             this._delayCounter += this._tick;
@@ -94,6 +158,11 @@ class FieldTest {
         }
     }
 
+    /**
+     * FIELD TEST : RUN
+     * Begins the loop.
+     * @param elemIndex The index on the corresponding DOM NodeArray
+     */
     run(elemIndex) {
         if (!isDefined(elemIndex)) {
             throw `Undefined index element`;
@@ -106,11 +175,15 @@ class FieldTest {
         this._interNum = setInterval(this._callback.bind(this), this._tick);
     }
 
+    /**
+     * FIELD TEST : STOP
+     * Stops the loop.
+     */
     stop() {
         if (isDefined(this._interNum)) {
             clearInterval(this._interNum);
+            console.log(`Interval ${this.interNum} stopped`);
             this._interNum = null;
-            console.log('Interval stopped');
         }
     }
 }

@@ -1,28 +1,35 @@
 function loadProducts(fileName) {
     let promise = ajaxGet(fileName);
-
-    return {
+    let handler = {
         each: function(callback) {
-            promise.then((json) => {
+            promise
+            .then((json) => {
                 let products = JSON.parse(json);
                 for (let product of products) {
                     callback(product);
                 }
-            }).catch((status, text) => {
-                console.log(`${status}: ${text}`);
-                callback(null);
             });
+            return handler;
         },
         all: function(callback) {
-            promise.then((json) => {
+            promise
+            .then((json) => {
                 let products = JSON.parse(json);
                 callback(products);
-            }).catch((status, text) => {
-                console.log(`${status}: ${text}`);
-                callback(null);
             });
+            return handler;
+        },
+        error: function(callback) {
+            promise
+            .catch((status, text) => {
+                console.log(`${status}: ${text}`);
+                callback();
+            });
+            return handler;
         }
     }
+
+    return handler;
 }
 
 function loadCart() {

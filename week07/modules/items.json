@@ -1,9 +1,16 @@
 [
     {
         "sku": "830235",
-        "name": "",
+        "name": "Lines from Heaven",
         "description": "",
-        "imageURL": "",
+        "imageURL": "art1.png",
         "price": 15.00
+    },
+    {
+        "sku": "802493",
+        "name": "Rainbow",
+        "description": "",
+        "imageURL": "art2.png",
+        "price": 20.00
     }
 ]

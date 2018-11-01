@@ -6,21 +6,18 @@ function onBodyLoad() {
     loadProducts('./modules/items.json')
     .each((product) => {
         let row = tblProducts.insertRow();
-        // let cell0 = row.insertCell();
-        // let cell1 = row.insertCell();
-        // let cell2 = row.insertCell();
+        
+        let cell0 = row.insertCell();
+        let anchor = document.createElement('a');
+        anchor.href = `./assets/images/${product.imageURL}`;
+        let image = new Image(100, 100);
+        image.src = `./assets/images/${product.imageURL}`;
+        anchor.appendChild(image);
+        cell0.appendChild(anchor);
 
-        // cell0.innerText = product;
-        for (key in product) {
-            let cell = row.insertCell();
-            let label = document.createElement('label');
-            let value = product[key] || 'N/A';
-            if (key == 'price') {
-                value = toMoneyString(value);
-            }
-            label.innerText = `${key}: ${value}`;
-            cell.appendChild(label);
-        }
+        let cell1 = row.insertCell();
+        cell1.innerText = product.name;
+        // }
     })
     .error(() => {
         alert('Error loading products');

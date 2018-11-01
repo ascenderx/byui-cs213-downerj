@@ -94,7 +94,7 @@ class ShoppingCart {
         }
         
         let count = this._products[sku];
-        let quantity = parseInt(quantity);
+        quantity = parseInt(quantity);
         if (quantity < 0) {
             throw `ShoppingCart:removeProduct() -> Invalid quantity "${quantity}"`;
         }

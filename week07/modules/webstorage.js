@@ -85,7 +85,7 @@ class StorageManager {
             return null;
         }
         
-        return this._type.getItem(key);
+        return JSON.parse(this._type.getItem(key));
     }
     
     /**

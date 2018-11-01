@@ -8,6 +8,8 @@ class Product {
      * @throws    Exception if SKU is undefined or if the price is not a non-negative number
      */
     constructor(obj) {
+        obj = obj || {};
+        
         if (!('sku' in obj) || obj.sku === undefined || obj.sku === null) {
             throw 'Product:new() -> Invalid product SKU';
         }

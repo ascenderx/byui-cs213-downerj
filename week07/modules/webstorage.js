@@ -7,8 +7,10 @@ class StorageManager {
      * @param obj The key-value map of properties to bind
      */
     constructor(obj) {
+        obj = obj || {};
+
         this._window = obj.window || window;
-        this._type = this.window.sessionStorage;
+        this._type = this._window.sessionStorage;
         
         try {
             this._window.sessionStorage.setItem('test', 0);
@@ -60,12 +62,12 @@ class StorageManager {
             case 'session':
             case 'default':
             case 'volatile':
-                this._type = this.window.sessionStorage;
+                this._type = this._window.sessionStorage;
                 break;
             
             case 'local':
             case 'persistent':
-                this._type = this.window.localStorage;
+                this._type = this._window.localStorage;
                 break;
             
             default:

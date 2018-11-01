@@ -46,18 +46,23 @@ function ajax(method, resource, data) {
  * @returns        A Promise for when the ready state resolves to DONE (4)
  */
 function ajaxGet(resource, data) {
-    // construct GET URI parameters from data
-    let params = '';
-    let count = 0;
-    for (let datum of data) {
-        let key = encodeURIComponent(datum[0]);
-        let value = encodeURIComponent(datum[1]);
-        params += `${key}=${value}`;
-        if (count++ > 0) {
-            params += '&';
+    let url;
+    if (data !== null && data !== undefined) {
+        // construct GET URI parameters from data
+        let params = '';
+        let count = 0;
+        for (let datum of data) {
+            let key = encodeURIComponent(datum[0]);
+            let value = encodeURIComponent(datum[1]);
+            params += `${key}=${value}`;
+            if (count++ > 0) {
+                params += '&';
+            }
         }
+        url = `${resource}?${params}`;
+    } else {
+        url = resource;
     }
-    let url = `${resource}?${params}`;
 
     // return the call to ajax()
     return new Promise((resolve, reject) => {

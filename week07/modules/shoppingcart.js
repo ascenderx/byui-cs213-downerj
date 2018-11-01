@@ -5,8 +5,16 @@ class ShoppingCart {
     /**
      * SHOPPING CART : CONSTRUCTOR
      */
-    constructor() {
-        this._products = {};
+    constructor(obj) {
+        if (obj !== null && obj !== undefined) {
+            if ('products' in obj) {
+                for (let sku in obj.products) {
+                    this._products[sku] = obj.products[sku];
+                }
+            }
+        } else {
+            this._products = {};
+        }
     }
 
     /**
@@ -24,7 +32,7 @@ class ShoppingCart {
      * @throws      Exception when this setter is called
      */
     set products(dummy) { 
-        throw "ShoppingCart:products:set() -> Immutable property";
+        throw 'ShoppingCart:products:set() -> Immutable property';
     }
 
     /**
@@ -41,11 +49,11 @@ class ShoppingCart {
         if (quantity === null || quantity === undefined) {
             quantity = 1;
         } else if (isNaN(quantity)) {
-            throw `ShoppingCart:addProduct() -> Invalid quantity "${quantity}"`;
+            throw `ShoppingCart:addProduct() -> Invalid quantity '${quantity}'`;
         } else {
             quantity = parseInt(quantity);
             if (quantity < 0) {
-                throw `ShoppingCart:addProduct() -> Invalid quantity "${quantity}"`;
+                throw `ShoppingCart:addProduct() -> Invalid quantity '${quantity}'`;
             }
         }
 
@@ -90,13 +98,13 @@ class ShoppingCart {
             delete this._products[sku];
             return true;
         } else if (!isNaN(quantity)) {
-            throw `ShoppingCart:removeProduct() -> Invalid quantity "${quantity}"`;
+            throw `ShoppingCart:removeProduct() -> Invalid quantity '${quantity}'`;
         }
         
         let count = this._products[sku];
         quantity = parseInt(quantity);
         if (quantity < 0) {
-            throw `ShoppingCart:removeProduct() -> Invalid quantity "${quantity}"`;
+            throw `ShoppingCart:removeProduct() -> Invalid quantity '${quantity}'`;
         }
 
         if (count - quantity <= 0) {
@@ -124,7 +132,7 @@ class ShoppingCart {
      */
     getSubtotal(productList) {
         if (productList === undefined || productList === null) {
-            throw "ShoppingCart:getSubtotal() -> Invalid product list";
+            throw 'ShoppingCart:getSubtotal() -> Invalid product list';
         }
 
         let subtotal = 0.00;

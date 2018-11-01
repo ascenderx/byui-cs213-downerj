@@ -22,11 +22,11 @@ class Product {
         if (price === undefined || price === null) {
             price = 0.00;
         } else if (isNaN(price)) {
-            throw `Product:new() -> Invalid price "${price}"`;
+            throw `Product:new() -> Invalid price '${price}'`;
         }
         let priceNum = Number(price);
         if (priceNum < 0.00) {
-            throw `Product:new() -> Invalid price "${price}"`;
+            throw `Product:new() -> Invalid price '${price}'`;
         }
         this._price = priceNum;
     }
@@ -110,12 +110,12 @@ class Product {
      */
     set price(price) {
         if (isNaN(price)) {
-            throw `Product:setPrice() -> Invalid price "${price}"`;
+            throw `Product:setPrice() -> Invalid price '${price}'`;
         }
         
         let priceNum = Number(price);
         if (priceNum < 0.00) {
-            throw `Product:setPrice() -> Invalid price "${price}"`;
+            throw `Product:setPrice() -> Invalid price '${price}'`;
         }
         
         this._price = priceNum;

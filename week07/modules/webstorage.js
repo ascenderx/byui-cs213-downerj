@@ -33,12 +33,12 @@ class StorageManager {
     
     /**
      * STORAGE MANAGER : SET IS AVAILABLE
-     * Unused as "available" is immutable after construction.
+     * Unused as 'available' is immutable after construction.
      * @param dummy Unused
      * @throws      Exception when this setter is called
      */
     set available(dummy) { 
-        throw "StorageManager:available:set() -> Immutable property";
+        throw 'StorageManager:available:set() -> Immutable property';
     }
     
     /**

@@ -4,6 +4,8 @@
 class Product {
     /**
      * PRODUCT : CONSTRUCTOR
+     * @param obj The key-value map of properties to bind
+     * @throws    Exception if SKU is undefined or if the price is not a non-negative number
      */
     constructor(obj) {
         if (!('sku' in obj) || obj.sku === undefined || obj.sku === null) {
@@ -29,6 +31,7 @@ class Product {
     
     /**
      * PRODUCT : GET SKU
+     * @returns The product SKU
      */
     get sku() {
         return this._sku;
@@ -36,6 +39,7 @@ class Product {
     
     /**
      * PRODUCT : SET SKU
+     * @param sku The new SKU
      */
     set sku(sku) {
         this._sku = sku.toString();
@@ -43,6 +47,7 @@ class Product {
     
     /**
      * PRODUCT : GET NAME
+     * @returns The product name
      */
     get name() {
         return this._name;
@@ -50,6 +55,7 @@ class Product {
     
     /**
      * PRODUCT : SET NAME
+     * @param name The new name
      */
     set name(name) {
         this._name = name.toString();
@@ -57,6 +63,7 @@ class Product {
     
     /**
      * PRODUCT : GET DESCRIPTION
+     * @returns The product description
      */
     get description() {
         return this._description;
@@ -64,6 +71,7 @@ class Product {
     
     /**
      * PRODUCT : SET DESCRIPTION
+     * @param description The new description
      */
     set description(description) {
         this._description = description.toString();
@@ -71,6 +79,7 @@ class Product {
 
     /**
      * PRODUCT : GET IMAGE URL
+     * @returns The product image URL
      */
     get imageURL() {
         return this._imageURL;
@@ -78,6 +87,7 @@ class Product {
 
     /**
      * PRODUCT : SET IMAGE URL
+     * @param url The new image URL
      */
     set imageURL(url) {
         this._imageURL = url.toString();
@@ -85,6 +95,7 @@ class Product {
     
     /**
      * PRODUCT : GET PRICE
+     * @returns The product price
      */
     get price() {
         return this._price;
@@ -92,6 +103,8 @@ class Product {
     
     /**
      * PRODUCT : SET PRICE
+     * @param price The new product price
+     * @throws      An exception if the price is not a non-negative number
      */
     set price(price) {
         if (isNaN(price)) {

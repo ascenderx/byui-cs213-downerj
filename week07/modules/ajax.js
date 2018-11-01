@@ -13,6 +13,10 @@ const STATUS_INVALID = 406;
 
 /**
  * AJAX : GENERIC HANDLER
+ * @param method   The HTTP method to use
+ * @param resource The URL/URI of the requested resource
+ * @param data     A key-value map of data to send (e.g. for POST, not for GET)
+ * @returns        A Promise for when the ready state resolves to DONE (4)
  */
 function ajax(method, resource, data) {
     let xhr = new XMLHttpRequest();
@@ -37,6 +41,9 @@ function ajax(method, resource, data) {
 
 /**
  * AJAX : GET
+ * @param resource The URL/URI of the requested resource
+ * @param data     The key-value map of data to send as part of the URL/URI
+ * @returns        A Promise for when the ready state resolves to DONE (4)
  */
 function ajaxGet(resource, data) {
     // construct GET URI parameters from data
@@ -66,6 +73,9 @@ function ajaxGet(resource, data) {
 
 /**
  * AJAX : POST
+ * @param resource The URL/URI of the requested resource
+ * @param data     The key-value map of data to send separately from the URL/URI
+ * @returns        A Promise for when the ready state resolves to DONE (4)
  */
 function ajaxPost(resource, data) {
     // return the call to ajax()

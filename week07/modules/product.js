@@ -12,6 +12,7 @@ class Product {
         this.sku = obj.sku;
         this.name = obj.name || 'Untitled';
         this.description = obj.description || 'N/A';
+        this.imageURL = obj.imageURL || null;
         
         let price = obj.price;
         if (price === undefined || price === null) {
@@ -19,12 +20,10 @@ class Product {
         } else if (isNaN(price)) {
             throw `Invalid price "${price}"`;
         }
-        
         let priceNum = Number(price);
         if (priceNum < 0.00) {
             throw `Invalid price "${price}"`;
         }
-        
         this.price = priceNum;
     }
     
@@ -68,6 +67,20 @@ class Product {
      */
     set description(description) {
         this.description = description.toString();
+    }
+
+    /**
+     * PRODUCT : GET IMAGE URL
+     */
+    get imageURL() {
+        return this.imageURL;
+    }
+
+    /**
+     * PRODUCT : SET IMAGE URL
+     */
+    set imageURL(url) {
+        this.imageURL = url.toString();
     }
     
     /**

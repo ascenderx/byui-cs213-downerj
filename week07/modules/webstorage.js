@@ -31,7 +31,7 @@ class StorageManager {
      * STORAGE MANAGER : SET IS AVAILABLE
      * Unused as "available" is immutable after construction.
      */
-    set available() { /* immutable */ }
+    set available(dummy) { /* immutable */ }
     
     /**
      * STORAGE MANAGER : GET STORAGE TYPE

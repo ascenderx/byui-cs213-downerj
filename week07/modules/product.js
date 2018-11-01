@@ -6,88 +6,88 @@ class Product {
      * PRODUCT : CONSTRUCTOR
      */
     constructor(obj) {
-        if (!('sku' in obj)) {
-            throw 'Invalid product SKU';
+        if (!('sku' in obj) || obj.sku === undefined || obj.sku === null) {
+            throw 'Product:new() -> Invalid product SKU';
         }
-        this.sku = obj.sku;
-        this.name = obj.name || 'Untitled';
-        this.description = obj.description || 'N/A';
-        this.imageURL = obj.imageURL || null;
+        this._sku = obj.sku.toString();
+        this._name = (obj.name || 'Untitled').toString();
+        this._description = (obj.description || 'N/A').toString();
+        this._imageURL = (obj.imageURL || null).toString();
         
         let price = obj.price;
         if (price === undefined || price === null) {
             price = 0.00;
         } else if (isNaN(price)) {
-            throw `Invalid price "${price}"`;
+            throw `Product:new() -> Invalid price "${price}"`;
         }
         let priceNum = Number(price);
         if (priceNum < 0.00) {
-            throw `Invalid price "${price}"`;
+            throw `Product:new() -> Invalid price "${price}"`;
         }
-        this.price = priceNum;
+        this._price = priceNum;
     }
     
     /**
      * PRODUCT : GET SKU
      */
     get sku() {
-        return this.sku;
+        return this._sku;
     }
     
     /**
      * PRODUCT : SET SKU
      */
     set sku(sku) {
-        this.sku = sku.toString();
+        this._sku = sku.toString();
     }
     
     /**
      * PRODUCT : GET NAME
      */
     get name() {
-        return this.name;
+        return this._name;
     }
     
     /**
      * PRODUCT : SET NAME
      */
     set name(name) {
-        this.name = name.toString();
+        this._name = name.toString();
     }
     
     /**
      * PRODUCT : GET DESCRIPTION
      */
     get description() {
-        return this.description;
+        return this._description;
     }
     
     /**
      * PRODUCT : SET DESCRIPTION
      */
     set description(description) {
-        this.description = description.toString();
+        this._description = description.toString();
     }
 
     /**
      * PRODUCT : GET IMAGE URL
      */
     get imageURL() {
-        return this.imageURL;
+        return this._imageURL;
     }
 
     /**
      * PRODUCT : SET IMAGE URL
      */
     set imageURL(url) {
-        this.imageURL = url.toString();
+        this._imageURL = url.toString();
     }
     
     /**
      * PRODUCT : GET PRICE
      */
     get price() {
-        return this.price;
+        return this._price;
     }
     
     /**
@@ -95,14 +95,14 @@ class Product {
      */
     set price(price) {
         if (isNaN(price)) {
-            throw `Invalid price "${price}"`;
+            throw `Product:setPrice() -> Invalid price "${price}"`;
         }
         
         let priceNum = Number(price);
         if (priceNum < 0.00) {
-            throw `Invalid price "${price}"`;
+            throw `Product:setPrice() -> Invalid price "${price}"`;
         }
         
-        this.price = priceNum;
+        this._price = priceNum;
     }
 }

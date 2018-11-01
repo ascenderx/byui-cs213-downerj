@@ -6,17 +6,17 @@ class StorageManager {
      * STORAGE MANAGER : CONSTRUCTOR
      */
     constructor(obj) {
-        this.window = obj.window || window;
-        this.type = this.window.sessionStorage;
+        this._window = obj.window || window;
+        this._type = this.window.sessionStorage;
         
         try {
-            this.window.sessionStorage.setItem('test', 0);
-            this.window.sessionStorage.removeItem('test');
-            this.window.localStorage.setItem('test', 0);
-            this.window.localStorage.removeItem('test');
-            this.available = true;
+            this._window.sessionStorage.setItem('test', 0);
+            this._window.sessionStorage.removeItem('test');
+            this._window.localStorage.setItem('test', 0);
+            this._window.localStorage.removeItem('test');
+            this._available = true;
         } catch (ex) {
-            this.available = false;
+            this._available = false;
         }
     }
     
@@ -24,20 +24,22 @@ class StorageManager {
      * STORAGE MANAGER : GET IS AVAILABLE
      */
     get available() {
-        return this.available;
+        return this._available;
     }
     
     /**
      * STORAGE MANAGER : SET IS AVAILABLE
      * Unused as "available" is immutable after construction.
      */
-    set available(dummy) { /* immutable */ }
+    set available(dummy) { 
+        throw "StorageManager:available:set() -> Immutable property";
+    }
     
     /**
      * STORAGE MANAGER : GET STORAGE TYPE
      */
     get type() {
-        if (this.type == this.window.localStorage) {
+        if (this._type == this._window.localStorage) {
             return 'persistent';
         } else {
             return 'volatile';
@@ -52,12 +54,12 @@ class StorageManager {
             case 'session':
             case 'default':
             case 'volatile':
-                this.type = this.window.sessionStorage;
+                this._type = this.window.sessionStorage;
                 break;
             
             case 'local':
             case 'persistent':
-                this.type = this.window.localStorage;
+                this._type = this.window.localStorage;
                 break;
             
             default:
@@ -69,22 +71,22 @@ class StorageManager {
      * STORAGE MANAGER : GET ITEM
      */
     getItem(key) {
-        if (!this.available) {
+        if (!this._available) {
             return null;
         }
         
-        return this.type.getItem(key);
+        return this._type.getItem(key);
     }
     
     /**
      * STORAGE MANAGER : SET ITEM
      */
     setItem(key, value) {
-        if (!this.available) {
+        if (!this._available) {
             return false;
         }
         
-        this.type.setItem(key, value);
+        this._type.setItem(key, value);
         return true;
     }
     
@@ -92,11 +94,11 @@ class StorageManager {
      * STORAGE MANAGER : REMOVE ITEM
      */
     removeItem(key) {
-        if (!this.available) {
+        if (!this._available) {
             return false;
         }
         
-        this.type.removeItem(key);
+        this._type.removeItem(key);
         return true;
     }
     
@@ -104,11 +106,11 @@ class StorageManager {
      * STORAGE MANAGER : HAS ITEM
      */
     hasItem(key) {
-        if (!this.available) {
+        if (!this._available) {
             return false;
         }
         
-        let temp = this.type.getItem(key);
+        let temp = this._type.getItem(key);
         return temp !== null;
     }
 }

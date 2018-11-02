@@ -8,9 +8,23 @@
     },
     {
         "sku": "802493",
-        "name": "Rainbow",
-        "description": "Unicorn tears",
+        "name": "Rainbow Juice",
+        "description": "Best known as unicorn tears",
         "imageURL": "art2.png",
         "price": 20.00
+    },
+    {
+        "sku": "900000",
+        "name": "Colorful Cirlces",
+        "description": "They're basically universe frisbees",
+        "imageURL": "art4.png",
+        "price": 40.00
+    },
+    {
+        "sku": "303030",
+        "name": "Tree Fractal",
+        "description": "The noblest of branch-like manifestations",
+        "imageURL": "treefract.png",
+        "price": 200.00
     }
 ]

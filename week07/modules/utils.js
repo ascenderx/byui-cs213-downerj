@@ -33,12 +33,6 @@ function toMoneyString(amount) {
         }
     }
 
-    // let centsString = (amount % 1.00).toString().substr(1, 3);
-    // console.log(centsString);
-    // if (centsString.length == 1) {
-    //     centsString += '0';
-    // }
-
     // force 2 decimal places
     let cents = Math.abs(amount % 1.00);
     let centsString;
@@ -50,4 +44,42 @@ function toMoneyString(amount) {
     }
     
     return `${negativeString}\$${unitsString}.${centsString}`;
+}
+
+function constructElement(tagName, props) {
+    if (!tagName) {
+        throw 'constructElement() -> Undefined tag name';
+    }
+
+    let elem = document.createElement(tagName);
+
+    if (!props) {
+        return elem;
+    }
+
+    for (let key in props) {
+        elem[key] = props[key];
+    }
+
+    return elem;
+}
+
+function newBr() {
+    return document.createElement('br');
+}
+
+function newHr() {
+    return document.createElement('hr');
+}
+
+function addChildren(elem, nodes) {
+    for (let node of nodes) {
+        elem.appendChild(node);
+    }
+}
+
+function setStyles(elem, styles) {
+    for (let key of styles) {
+        elem.style[key] = styles[key];
+    }
 }

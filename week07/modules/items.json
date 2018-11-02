@@ -2,14 +2,14 @@
     {
         "sku": "830235",
         "name": "Lines from Heaven",
-        "description": "",
+        "description": "\"But soft, what light through yonder window breaks?\" — W. Shakespeare",
         "imageURL": "art1.png",
         "price": 1002001203.03045654
     },
     {
         "sku": "802493",
         "name": "Rainbow",
-        "description": "",
+        "description": "Unicorn tears",
         "imageURL": "art2.png",
         "price": 20.00
     }

@@ -20,21 +20,34 @@ function toMoneyString(amount) {
     }
     amount = Number(amount);
 
-    let units = Math.floor(amount).toString();
+    let negativeString = (amount < 0) ? '-' : '';
+
     // add commas to the units
+    let units = Math.abs(Math.floor(amount)).toString();
     let unitsString = '';
-    let patternOffset = 2 - (units.length - 1) % 3;
+    let patternOffset = 3 - (units.length - 1) % 3;
     for (let u = 0; u < units.length; u++) {
         unitsString += units.charAt(u);
-        if ((u + patternOffset) % 3 === 0) {
+        if ((u + patternOffset) % 3 === 0 && u < units.length - 1) {
             unitsString += ',';
         }
     }
 
-    let centsString = (amount % 1.00).toString().substr(0, 2);
-    if (centsString.length == 1) {
-        centsString += '0';
-    }
+    // let centsString = (amount % 1.00).toString().substr(1, 3);
+    // console.log(centsString);
+    // if (centsString.length == 1) {
+    //     centsString += '0';
+    // }
 
-    return `\$${unitsString}.${centsString}`;
+    // force 2 decimal places
+    let cents = Math.abs(amount % 1.00);
+    let centsString;
+    centsHundred = Math.floor(cents * 100);
+    if (centsHundred < 10) {
+        centsString = `0${centsHundred}`;
+    } else {
+        centsString = `${centsHundred}`;
+    }
+    
+    return `${negativeString}\$${unitsString}.${centsString}`;
 }

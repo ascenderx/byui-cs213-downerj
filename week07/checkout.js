@@ -163,9 +163,11 @@ function onLoad() {
                 continue;       
         }
 
-        elem.addEventListener('change', () => {
+        let callback = () => {
             validateRegex(elem.name, false);
-        });
+        };
+
+        elem.addEventListener('blur', callback);
 
         session.fieldsValid[elem.name] = false;
         validateRegex(elem.name, true);

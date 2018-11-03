@@ -5,15 +5,12 @@ class ShoppingCart {
     /**
      * SHOPPING CART : CONSTRUCTOR
      */
-    constructor(obj) {
-        if (obj !== null && obj !== undefined) {
-            if ('products' in obj) {
-                for (let sku in obj.products) {
-                    this._products[sku] = obj.products[sku];
-                }
+    constructor(products) {
+        this._products = {};
+        if (products !== null && products !== undefined) {
+            for (let sku in products) {
+                this._products[sku] = products[sku];
             }
-        } else {
-            this._products = {};
         }
     }
 

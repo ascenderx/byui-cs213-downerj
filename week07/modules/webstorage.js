@@ -85,7 +85,11 @@ class StorageManager {
             return null;
         }
         
-        return JSON.parse(this._type.getItem(key));
+        let item = this._type.getItem(key);
+        if (item === "undefined" || item === "null") {
+            return null;
+        }
+        return JSON.parse(item);
     }
     
     /**
@@ -99,7 +103,7 @@ class StorageManager {
             return false;
         }
         
-        this._type.setItem(key, value);
+        this._type.setItem(key, JSON.stringify(value));
         return true;
     }
     

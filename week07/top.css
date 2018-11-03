@@ -1,3 +1,8 @@
+.u-meta-container {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+
 .u-container {
     border: 1px solid #000;
     margin-bottom: 10px;

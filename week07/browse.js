@@ -1,9 +1,20 @@
-let tblProducts;
+const session = {
+    rsrcMgr: null,
+    productList: null
+}
 
-function onBodyLoad() {
-    tblProducts = byId('table-products');
+const user = {
+    cart: null
+}
 
-    loadProducts('./modules/items.json')
+function addProduct(sku) {
+    user.cart.addProduct(sku);
+}
+
+function populateTable() {
+    let tblProducts = byId('table-products');
+    session.rsrcMgr.loadProducts('./modules/items.json')
+    .all((products) => { session.productList = products; })
     .each((product) => {
         const LOCAL_URL = `./assets/images/${product.imageURL}`
         const IMAGE_WIDTH = 150;
@@ -35,17 +46,26 @@ function onBodyLoad() {
         let lblPrice = constructElement('span', {
             'innerText': toMoneyString(product.price)
         });
+        let itemInCart = user.cart.hasProduct(product.sku);
+        let btAdd = constructElement('button', {
+            'type': 'button',
+            'innerText': (itemInCart) ? 'Item in Cart' : 'Add to Cart',
+            'disabled': itemInCart
+        });
+        btAdd.addEventListener('click', () => { 
+            addProduct(product.sku);
+            btAdd.disabled = true;
+            btAdd.innerText = "Item in Cart";
+        });
+
         let cell1 = row.insertCell();
         cell1.style.verticalAlign = 'top';
         addChildren(cell1, [
-            lblName,
-            newBr(),
-            lblDescription,
-            newBr(),
-            newBr(),
-            lblSKU, 
-            newBr(),
-            lblPrice
+            lblName, newBr(),
+            lblDescription, newBr(), newBr(),
+            lblSKU, newBr(),
+            lblPrice, newBr(), newBr(),
+            btAdd
         ]);
     })
     .error(() => {
@@ -53,4 +73,16 @@ function onBodyLoad() {
     });
 }
 
-window.addEventListener('load', onBodyLoad);
+function onLoad() {
+    session.rsrcMgr = new ResourceManager();
+    user.cart = session.rsrcMgr.loadCart();
+
+    populateTable();
+}
+
+function onUnload() {
+    session.rsrcMgr.saveCart(user.cart);
+}
+
+window.addEventListener('load', onLoad);
+window.addEventListener('beforeunload', onUnload);

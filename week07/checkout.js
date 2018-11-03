@@ -135,6 +135,10 @@ function validateRegex(key, skipUpdateView) {
             elem.style.borderColor = session.inputColors.border;
             elem.style.backgroundColor = session.inputColors.background;
         }
+    } else {
+        elem.style.color = session.initialColors.text;
+        elem.style.borderColor = session.initialColors.border;
+        elem.style.backgroundColor = session.initialColors.background;
     }
 
     session.fieldsValid[key] = valid;
@@ -219,6 +223,23 @@ function onUnload(event) {
 
 function onReset() {
     session.formModified = false;
+
+    let frmMain = byId('frm-main');
+    for (let elem of frmMain.elements) {
+        switch (elem.tagName) {
+            case 'INPUT':
+            case 'SELECT':
+            case 'TEXTAREA':
+                break;
+            
+            default:
+                continue;       
+        }
+
+        session.fieldsValid[elem.name] = false;
+        validateRegex(elem.name, true);
+    }
+
     updateResetView();
     updateSubmitView();
 }

@@ -65,8 +65,8 @@ const REGEX_MAP = {
     'address-email': /(^$)|(^[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+([\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]?[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]+)?\@{1}[\w\-]+(\.{1}\w+)+$)/,
     'card-name': /^[\w\-\s]+$/,
     'card-number': /^((\d{4}[ ]?){4})$/,
-    'card-expires-month': /^(0?[1-9])|(1{1}[0-2])$/,
-    'card-expires-year': /^(\d{2})|()$/
+    'card-expires-month': /^\d{2}$/,
+    'card-expires-year': /^\d{2}$/
 };
 
 const US_STATES = [
@@ -140,10 +140,39 @@ function onLoad() {
     let selAddressState = byId('sel-address-state');
     for (let state of US_STATES) {
         let option = constructElement('option', {
-            'value': state,
-            'innerText': state
+            value: state,
+            innerText: state
         });
         selAddressState.appendChild(option);
+    }
+
+    let selCardExpiresMonth = byId('sel-card-expires-month');
+    let blankOption = constructElement('option', {
+        value: ' ',
+        innerText: ' '
+    });
+    selCardExpiresMonth.appendChild(blankOption);
+    for (let m = 1; m <= 12; m++) {
+        let option = constructElement('option', {
+            value: m,
+            innerText: m
+        });
+        selCardExpiresMonth.appendChild(option);
+    }
+
+    let selCardExpiresYear = byId('sel-card-expires-year');
+    let blankOption2 = constructElement('option', {
+        value: ' ',
+        innerText: ' '
+    });
+    selCardExpiresYear.appendChild(blankOption2);
+    let thisYear = new Date().getFullYear() % 100;
+    for (let y = 0; y < 10; y++) {
+        let option = constructElement('option', {
+            value: thisYear + y,
+            innerText: thisYear + y
+        });
+        selCardExpiresYear.appendChild(option);
     }
 }
 

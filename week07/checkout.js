@@ -2,6 +2,7 @@ const session = {
     rsrcMgr: null,
     productList: null,
     formModified: false,
+    submitting: false,
     fieldsValid: {},
     initialColors: {
         text: '#0af',
@@ -214,7 +215,9 @@ function onLoad() {
 }
 
 function onUnload(event) {
-    if (session.formModified) {
+    if (session.submitting) {
+        return;
+    } else if (session.formModified) {
         event.preventDefault();
         event.returnValue = 1;
         return 1;
@@ -257,12 +260,21 @@ function onResetClick() {
 
     let answer = confirm('Are you sure you want to reset the form?');
     if (answer) {
+        session.submitting = true;
+        
         byId('frm-main').reset();
     }
 }
 
 function onSubmitClick() {
-    
+    let amount = toMoneyString(user.cart.getSubtotal(session.productList));
+    let answer = confirm(`Finalize purchase of ${amount}?`);
+    if (answer) {
+        user.cart = {};
+        session.rsrcMgr.removeCartItemsFromStorage();
+        session.submitting = true;
+        byId('frm-main').submit();
+    }
 }
 
 window.addEventListener('beforeunload', onUnload);

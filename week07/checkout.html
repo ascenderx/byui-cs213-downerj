@@ -56,7 +56,7 @@
                 <span class="u-required"></span> Required field
                 <br />
                 <br />
-                <form id="frm-main" onreset="onReset();" oninput="onInput();">
+                <form id="frm-main" onreset="onReset();" onchange="onChange();">
                 <span class="u-heading-3">Billing Information</span>
                 <table class="table-user-info">
                     <tr>
@@ -81,9 +81,8 @@
                     </tr>
                     <tr>
                         <td><label for="address-state" class="u-required">State</label></td>
-                        <!-- <td><input type="text" name="address-state" id="txt-address-state" /></td> -->
                         <td>
-                            <select name="address-state" id="sel-address-state" onchange="validateRegex('address-state');"></select>
+                            <select name="address-state" id="sel-address-state"></select>
                         </td>
                     </tr>
                     <tr>

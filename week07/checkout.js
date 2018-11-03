@@ -2,9 +2,15 @@ const session = {
     rsrcMgr: null,
     productList: null,
     formModified: false,
-    inputColors: {
+    fieldsValid: {},
+    initialColors: {
         text: '#0af',
         border: '#0af',
+        background: '#000'
+    },
+    inputColors: {
+        text: '#0f0',
+        border: '#0f0',
         background: '#000'
     },
     invalidColors: {
@@ -12,11 +18,11 @@ const session = {
         border: '#f00',
         background: '#300'
     }
-}
+};
 
 const user = {
     cart: null
-}
+};
 
 function updateCartView() {
     let size = user.cart.size;
@@ -53,6 +59,23 @@ function updateResetView() {
     byId('bt-reset').disabled = !session.formModified;
 }
 
+function updateSubmitView() {
+    let complete = true;
+    for (let key in session.fieldsValid) {
+        if (!session.fieldsValid[key]) {
+            complete = false;
+            break;
+        }
+    }
+
+    let btSubmit = byId('bt-submit');
+    if (!complete) {
+        btSubmit.disabled = true;
+    } else {
+        btSubmit.disabled = false;
+    }
+}
+
 const REGEX_MAP = {
     'first-name': /^.+$/,
     'last-name': /^.+$/,
@@ -65,8 +88,8 @@ const REGEX_MAP = {
     'address-email': /(^$)|(^[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+([\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]?[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]+)?\@{1}[\w\-]+(\.{1}\w+)+$)/,
     'card-name': /^[\w\-\s]+$/,
     'card-number': /^((\d{4}[ ]?){4})$/,
-    'card-expires-month': /^\d{2}$/,
-    'card-expires-year': /^\d{2}$/
+    'card-expires-month': /^\d+$/,
+    'card-expires-year': /^\d+$/
 };
 
 const US_STATES = [
@@ -92,7 +115,7 @@ const US_STATES = [
     'WA', 'WI', 'WV', 'WY'
 ];
 
-function validateRegex(key) {
+function validateRegex(key, skipUpdateView) {
     let elem = byName(key)[0];
 
     // strip padding spaces
@@ -100,23 +123,26 @@ function validateRegex(key) {
 
     let value = elem.value;
     let regex = REGEX_MAP[key];
-    if (value.search(regex) < 0) {
-        elem.style.color = session.invalidColors.text;
-        elem.style.borderColor = session.invalidColors.border;
-        elem.style.backgroundColor = session.invalidColors.background;
-    } else {
-        elem.style.color = session.inputColors.text;
-        elem.style.borderColor = session.inputColors.border;
-        elem.style.backgroundColor = session.inputColors.background;
+    let valid = value.search(regex) >= 0;
+
+    if (!skipUpdateView) {
+        if (!valid) {
+            elem.style.color = session.invalidColors.text;
+            elem.style.borderColor = session.invalidColors.border;
+            elem.style.backgroundColor = session.invalidColors.background;
+        } else {
+            elem.style.color = session.inputColors.text;
+            elem.style.borderColor = session.inputColors.border;
+            elem.style.backgroundColor = session.inputColors.background;
+        }
     }
+
+    session.fieldsValid[key] = valid;
 }
 
 function onLoad() {
     session.rsrcMgr = new ResourceManager();
     user.cart = session.rsrcMgr.loadCart();
-
-    loadProducts();
-    updateResetView();
 
     let frmMain = byId('frm-main');
     frmMain.reset();
@@ -133,8 +159,11 @@ function onLoad() {
         }
 
         elem.addEventListener('change', () => {
-            validateRegex(elem.name);
+            validateRegex(elem.name, false);
         });
+
+        session.fieldsValid[elem.name] = false;
+        validateRegex(elem.name, true);
     }
 
     let selAddressState = byId('sel-address-state');
@@ -174,6 +203,10 @@ function onLoad() {
         });
         selCardExpiresYear.appendChild(option);
     }
+
+    loadProducts();
+    updateResetView();
+    updateSubmitView();
 }
 
 function onUnload(event) {
@@ -187,11 +220,13 @@ function onUnload(event) {
 function onReset() {
     session.formModified = false;
     updateResetView();
+    updateSubmitView();
 }
 
-function onInput() {
+function onChange() {
     session.formModified = true;
     updateResetView();
+    updateSubmitView();
 }
 
 function onResetClick() {

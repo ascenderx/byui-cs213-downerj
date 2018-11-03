@@ -39,8 +39,8 @@ function populateTable() {
             let product = products[sku];
 
             const LOCAL_URL = `./assets/images/${product.imageURL}`
-            const IMAGE_WIDTH = 150;
-            const IMAGE_HEIGHT = 150;
+            const IMAGE_WIDTH = 100;
+            const IMAGE_HEIGHT = 100;
     
             let row = tblProducts.insertRow();
             

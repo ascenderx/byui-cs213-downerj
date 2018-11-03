@@ -9,12 +9,8 @@ const user = {
 
 function updateCartView() {
     let size = user.cart.size;
-    byId('lblCartSize').innerText = size;
-    byId('lblCartSizeS').innerText = (user.cart.size != 1) ? 's' : '';
-}
-
-function goToCart() {
-    window.location.href = './cart.html';
+    byId('lbl-cart-size').innerText = size;
+    byId('lbl-cart-size-s').innerText = (user.cart.size != 1) ? 's' : '';
 }
 
 function addProduct(sku) {
@@ -57,12 +53,12 @@ function populateTable() {
             'innerText': product.description || 'Description unavailable'
         });
         let lblSKU = constructElement('span', {
-            'innerHTML': `SKU&ndash;${product.sku}`
+            'innerHTML': `SKU&mdash;${product.sku}`
         });
         let lblPrice = constructElement('span', {
             'innerText': toMoneyString(product.price),
-            'class': 'u-price',
         });
+        lblPrice.style.color = '#ff0';
         
         let btAdd;
         let btRemove;

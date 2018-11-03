@@ -72,6 +72,8 @@ class ShoppingCart {
 
     /**
      * SHOPPING CART : GET SIZE
+     * Computes the size using the sum of items per SKU in the cart.
+     * @returns The total number of items in the cart
      */
     get size() {
         let total = 0;

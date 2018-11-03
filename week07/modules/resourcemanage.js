@@ -18,8 +18,8 @@ class ResourceManager {
                 promise
                 .then((json) => {
                     let products = JSON.parse(json);
-                    for (let product of products) {
-                        callback(product);
+                    for (let sku in products) {
+                        callback(products[sku]);
                     }
                 });
                 return handler;

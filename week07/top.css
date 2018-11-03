@@ -28,15 +28,19 @@ body {
 }
 
 .u-heading-1 {
-    font-size: 30px;
+    font-size: 34px;
+}
+
+.u-heading-2 {
+    font-size: 24px;
+}
+
+.u-heading-3 {
+    font-size: 20px;
 }
 
 .u-heading-1, .u-heading-2, .u-heading-3, button {
     font-family: 'Joystix Mono Regular';
-}
-
-.u-price {
-    color: '#0af';
 }
 
 .u-pull-left {
@@ -71,5 +75,9 @@ button[disabled], button[disabled]:hover, button[disabled]:focus {
 
 img {
     margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+hr {
     border: 1px solid #fff;
 }

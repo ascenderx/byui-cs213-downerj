@@ -7,6 +7,12 @@ const user = {
     cart: null
 }
 
+function updateCartView() {
+    let size = user.cart.size;
+    byId('lblCartSize').innerText = size;
+    byId('lblCartSizeS').innerText = (user.cart.size != 1) ? 's' : '';
+}
+
 function goToCart() {
     window.location.href = './cart.html';
 }
@@ -59,7 +65,9 @@ function populateTable() {
         });
         btAdd.addEventListener('click', () => { 
             addProduct(product.sku);
-            goToCart();
+            btAdd.disabled = true;
+            btAdd.innerText = 'Item in Cart';
+            updateCartView();
         });
         
         let cell1 = row.insertCell();
@@ -82,6 +90,7 @@ function onLoad() {
     user.cart = session.rsrcMgr.loadCart();
 
     populateTable();
+    updateCartView();
 }
 
 function onUnload() {

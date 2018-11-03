@@ -71,6 +71,18 @@ class ShoppingCart {
     }
 
     /**
+     * SHOPPING CART : GET SIZE
+     */
+    get size() {
+        let total = 0;
+        for (let sku in this._products) {
+            total += this._products[sku];
+        }
+
+        return total;
+    }
+
+    /**
      * SHOPPING CART : HAS PRODUCT
      * @param sku The SKU of the product to query
      * @returns   A boolean of whether the product is present

@@ -1,7 +1,17 @@
 const session = {
     rsrcMgr: null,
     productList: null,
-    formModified: false
+    formModified: false,
+    inputColors: {
+        text: '#0af',
+        border: '#0af',
+        background: '#000'
+    },
+    invalidColors: {
+        text: '#f00',
+        border: '#f00',
+        background: '#300'
+    }
 }
 
 const user = {
@@ -44,21 +54,23 @@ function updateResetView() {
 }
 
 const REGEX_MAP = {
-    'first-name': /^.*$/,
-    'last-name': /^.*$/,
-    'address-street': /^[0-9a-zA-Z\s()\/\-\.]*$/,
+    'first-name': /^.+$/,
+    'last-name': /^.+$/,
+    'address-street': /^[\w\s\/\-\.]+$/,
     'address-2': /^.*$/,
-    'address-city': /^[\w\s\-\.]*$/,
+    'address-city': /^[\w\s\-\.]+$/,
+    'address-state': /^[A-Z]{2}$/,
     'address-zip': /^(\d){5}(\-(\d){4})?$/,
-    'phone-number': /^(\+?1)?(((\d{3}[\-\s]?)|(\(\d{3}\)))\d{3}[\-\s]?\d{4})$/,
-    'address-email': /^[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+([\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]?[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]+)?\@{1}[\w\-]+(\.{1}\w+)+$/,
+    'phone-number': /^(\+?1[\-\s]?)?(((\d{3}[\-\s]?)|(\(\d{3}\)[\s]?))\d{3}[\-\s]?\d{4})$/,
+    'address-email': /(^$)|(^[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+([\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]?[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]+)?\@{1}[\w\-]+(\.{1}\w+)+$)/,
     'card-name': /^[\w\-\s]+$/,
     'card-number': /^((\d{4}[ ]?){4})$/,
-    // 'card-expires-month': /^(0?[1-9])|(1{1}[0-2])$/,
-    // 'card-expires-year': /^(\d{2})|()$/
+    'card-expires-month': /^(0?[1-9])|(1{1}[0-2])$/,
+    'card-expires-year': /^(\d{2})|()$/
 };
 
 const US_STATES = [
+    ' ',
     'AL', 'AK', 'AR', 'AZ',
     'CA', 'CO', 'CT',
     'DE',
@@ -81,7 +93,22 @@ const US_STATES = [
 ];
 
 function validateRegex(key) {
+    let elem = byName(key)[0];
 
+    // strip padding spaces
+    elem.value = elem.value.trim();
+
+    let value = elem.value;
+    let regex = REGEX_MAP[key];
+    if (value.search(regex) < 0) {
+        elem.style.color = session.invalidColors.text;
+        elem.style.borderColor = session.invalidColors.border;
+        elem.style.backgroundColor = session.invalidColors.background;
+    } else {
+        elem.style.color = session.inputColors.text;
+        elem.style.borderColor = session.inputColors.border;
+        elem.style.backgroundColor = session.inputColors.background;
+    }
 }
 
 function onLoad() {
@@ -91,7 +118,24 @@ function onLoad() {
     loadProducts();
     updateResetView();
 
-    byId('frm-main').reset();
+    let frmMain = byId('frm-main');
+    frmMain.reset();
+
+    for (let elem of frmMain.elements) {
+        switch (elem.tagName) {
+            case 'INPUT':
+            case 'SELECT':
+            case 'TEXTAREA':
+                break;
+            
+            default:
+                continue;       
+        }
+
+        elem.addEventListener('change', () => {
+            validateRegex(elem.name);
+        });
+    }
 
     let selAddressState = byId('sel-address-state');
     for (let state of US_STATES) {

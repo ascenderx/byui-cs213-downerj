@@ -69,7 +69,7 @@
                     </tr>
                     <tr>
                         <td><label for="address-street" class="u-required">Address</label></td>
-                        <td><input type="text" name="address-street" id="txt-address-street" /></td>
+                        <td><input type="text" name="address-street" id="txt-address-street" title="May contain only letters, numbers, spaces, hyphens (–), slashes (/) and dots (.)"/></td>
                     </tr>
                     <tr>
                         <td><label for="address-2">Address 2</label></td>
@@ -77,22 +77,22 @@
                     </tr>
                     <tr>
                         <td><label for="address-city" class="u-required">City</label></td>
-                        <td><input type="text" name="address-city" id="txt-address-city" /></td>
+                        <td><input type="text" name="address-city" id="txt-address-city" title="May contain only letters, spaces, hypens and dots" /></td>
                     </tr>
                     <tr>
                         <td><label for="address-state" class="u-required">State</label></td>
                         <!-- <td><input type="text" name="address-state" id="txt-address-state" /></td> -->
                         <td>
-                            <select name="address-state" id="sel-address-state"></select>
+                            <select name="address-state" id="sel-address-state" onchange="validateRegex('address-state');"></select>
                         </td>
                     </tr>
                     <tr>
                         <td><label for="address-zip" class="u-required">Zip</label></td>
-                        <td><input type="text" name="address-zip" id="txt-address-zip" /></td>
+                        <td><input type="text" name="address-zip" id="txt-address-zip" title="XXXXX or XXXXX-XXXX" /></td>
                     </tr>
                     <tr>
                         <td><label for="phone-number" class="u-required">Phone</label></td>
-                        <td><input type="text" name="phone-number" id="txt-phone-number" /></td>
+                        <td><input type="text" name="phone-number" id="txt-phone-number" title="+1 XXX-XXX-XXXX, (XXX) XXX-XXXX, etc."/></td>
                     </tr>
                     <tr>
                         <td><label for="address-email">Email</label></td>

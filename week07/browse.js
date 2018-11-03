@@ -19,6 +19,12 @@ function goToCart() {
 
 function addProduct(sku) {
     user.cart.addProduct(sku);
+    updateCartView();
+}
+
+function removeProduct(sku) {
+    user.cart.removeProduct(sku);
+    updateCartView();
 }
 
 function populateTable() {
@@ -57,17 +63,39 @@ function populateTable() {
             'innerText': toMoneyString(product.price),
             'class': 'u-price',
         });
+        
+        let btAdd;
+        let btRemove;
         let itemInCart = user.cart.hasProduct(product.sku);
-        let btAdd = constructElement('button', {
+
+        btAdd = constructElement('button', {
             'type': 'button',
-            'innerText': (itemInCart) ? 'Item in Cart' : 'Add to Cart',
+            'innerText': (itemInCart) ? 'Item In Cart' : 'Add To Cart',
             'disabled': itemInCart
         });
         btAdd.addEventListener('click', () => { 
             addProduct(product.sku);
             btAdd.disabled = true;
-            btAdd.innerText = 'Item in Cart';
-            updateCartView();
+            btAdd.innerText = 'Item In Cart';
+            btRemove.style.display = 'initial';
+            btRemove.disabled = false;
+        });
+        btRemove = constructElement('button', {
+            'type': 'button',
+            'innerText': 'Remove From Cart',
+            'disabled': !itemInCart
+        });
+        if (!itemInCart) {
+            btRemove.style.display = 'none';
+        } else {
+            btRemove.style.display = 'initial';
+        }
+        btRemove.addEventListener('click', () => {
+            removeProduct(product.sku);
+            btRemove.disabled = true;
+            btRemove.style.display = 'none';
+            btAdd.disabled = false;
+            btAdd.innerText = 'Add To Cart';
         });
         
         let cell1 = row.insertCell();
@@ -77,7 +105,7 @@ function populateTable() {
             lblDescription, newBr(), newBr(),
             lblSKU, newBr(),
             lblPrice, newBr(), newBr(),
-            btAdd
+            btAdd, btRemove
         ]);
     })
     .error(() => {

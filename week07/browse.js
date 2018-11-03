@@ -7,6 +7,10 @@ const user = {
     cart: null
 }
 
+function goToCart() {
+    window.location.href = './cart.html';
+}
+
 function addProduct(sku) {
     user.cart.addProduct(sku);
 }
@@ -44,7 +48,8 @@ function populateTable() {
             'innerHTML': `SKU&ndash;${product.sku}`
         });
         let lblPrice = constructElement('span', {
-            'innerText': toMoneyString(product.price)
+            'innerText': toMoneyString(product.price),
+            'class': 'u-price',
         });
         let itemInCart = user.cart.hasProduct(product.sku);
         let btAdd = constructElement('button', {
@@ -54,10 +59,9 @@ function populateTable() {
         });
         btAdd.addEventListener('click', () => { 
             addProduct(product.sku);
-            btAdd.disabled = true;
-            btAdd.innerText = "Item in Cart";
+            goToCart();
         });
-
+        
         let cell1 = row.insertCell();
         cell1.style.verticalAlign = 'top';
         addChildren(cell1, [

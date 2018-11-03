@@ -26,7 +26,10 @@ function removeProduct(sku) {
 function populateTable() {
     let tblProducts = byId('table-products');
     session.rsrcMgr.loadProducts('./modules/items.json')
-    .all((products) => { session.productList = products; })
+    .all((products) => { 
+        session.productList = products;
+        updateCartView();
+    })
     .each((product) => {
         const LOCAL_URL = `./assets/images/${product.imageURL}`
         const IMAGE_WIDTH = 150;
@@ -114,7 +117,6 @@ function onLoad() {
     user.cart = session.rsrcMgr.loadCart();
 
     populateTable();
-    updateCartView();
 }
 
 function onUnload() {

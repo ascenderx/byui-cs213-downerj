@@ -16,6 +16,8 @@ function updateCartView() {
     } else {
         byId('lbl-cart-empty').style.display = 'initial';
     }
+    let subtotal = user.cart.getSubtotal(session.productList);
+    byId('lbl-cart-subtotal').innerText = toMoneyString(subtotal);
 }
 
 function addProduct(sku) {
@@ -88,6 +90,8 @@ function populateTable() {
                 btRemove
             ]);
         }
+
+        updateCartView();
     })
     .error(() => {
         alert('Error loading products');
@@ -99,7 +103,6 @@ function onLoad() {
     user.cart = session.rsrcMgr.loadCart();
 
     populateTable();
-    updateCartView();
 }
 
 function onUnload() {

@@ -16,6 +16,8 @@ function updateCartView() {
     } else {
         byId('lbl-cart-empty').style.display = 'initial';
     }
+    let subtotal = user.cart.getSubtotal(session.productList);
+    byId('lbl-cart-subtotal').innerText = toMoneyString(subtotal);
 }
 
 function addProduct(sku) {
@@ -28,11 +30,19 @@ function removeProduct(sku) {
     updateCartView();
 }
 
+function loadProducts() {
+    session.rsrcMgr.loadProducts('./modules/items.json')
+    .all((products) => {
+        session.productList = products;
+        updateCartView();
+    });
+}
+
 function onLoad() {
     session.rsrcMgr = new ResourceManager();
     user.cart = session.rsrcMgr.loadCart();
 
-    updateCartView();
+    loadProducts();
 }
 
 function onUnload() {

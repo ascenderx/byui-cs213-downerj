@@ -31,6 +31,9 @@
     </head>
     <body>
         <div class="u-meta-container">
+            <a href="../index.html">&larr; Back to assignments</a>
+            <br /><br />
+
             <div class="u-container">
                 <div class="u-heading-1">DOWNTECH</div>
                 <div class="u-heading-3">ART GALLERY</div>
@@ -48,8 +51,76 @@
             <div class="u-container">
                 <span class="u-heading-2">Checkout</span>
                 <hr />
-                <label id="lbl-cart-empty">Your cart is empty</label>
-                <table id="table-products"></table>
+                <label id="lbl-cart-empty">Your cart is empty<br /></label>
+
+                <span class="u-required"></span> Required field
+                <br />
+                <br />
+                <form>
+                <span class="u-heading-3">Billing Information</span>
+                <table class="table-user-info">
+                    <tr>
+                        <td><label for="first-name" class="u-required">First Name</label></td>
+                        <td><input type="text" name="first-name" id="txt-first-name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="last-name" class="u-required">Last Name</label></td>
+                        <td><input type="text" name="last-name" id="txt-last-name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-street" class="u-required">Address</label></td>
+                        <td><input type="text" name="address-street" id="txt-address-street" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-2">Address 2</label></td>
+                        <td><input type="text" name="address-2" id="txt-address-2" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-city" class="u-required">City</label></td>
+                        <td><input type="text" name="address-city" id="txt-address-city" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-state" class="u-required">State</label></td>
+                        <td><input type="text" name="address-state" id="txt-address-state" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-zip" class="u-required">Zip</label></td>
+                        <td><input type="text" name="address-zip" id="txt-address-zip" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone-number" class="u-required">Phone</label></td>
+                        <td><input type="text" name="phone-number" id="txt-phone-number" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address-email">Email</label></td>
+                        <td><input type="text" name="address-email" id="txt-address-email" /></td>
+                    </tr>
+                </table>
+                <br />
+                <span class="u-heading-3">Payment Information</span>
+                <table class="table-user-info">
+                    <tr>
+                        <td><label for="card-name" class="u-required">Name on Card</label></td>
+                        <td><input type="text" name="card-name" id="txt-card-name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="card-number" class="u-required">Card Number</label></td>
+                        <td><input type="text" name="card-number" id="txt-card-number" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="card-expires" class="u-required">Expiration Date</label></td>
+                        <td>
+                            <input type="text" name="card-expires-month" id="txt-card-expires-month" class="u-input-small" />
+                            /
+                            <input type="text" name="card-expires-year" id="txt-card-expires-year" class="u-input-small" />
+                        </td>
+                    </tr>
+                </table>
+
+                <br />
+                <button type="button" id="bt-submit">Submit Payment</button>
+                <button type="reset" id="bt-reset">Reset</button>
+                </form>
             </div>
         </div>
 

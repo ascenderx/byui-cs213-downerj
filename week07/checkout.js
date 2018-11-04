@@ -167,6 +167,7 @@ function onLoad() {
             validateRegex(elem.name, false);
         };
 
+        elem.addEventListener('change', callback);
         elem.addEventListener('blur', callback);
 
         session.fieldsValid[elem.name] = false;

@@ -88,10 +88,19 @@ const REGEX_MAP = {
     'phone-number': /^(\+?1[\-\s]?)?(((\d{3}[\-\s]?)|(\(\d{3}\)[\s]?))\d{3}[\-\s]?\d{4})$/,
     'address-email': /(^$)|(^[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~]+([\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]?[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.]+)?\@{1}[\w\-]+(\.{1}\w+)+$)/,
     'card-name': /^[\w\-\s]+$/,
+    'card-type': /^[\w]+[\w\s]*$/,
     'card-number': /^((\d{4}[ ]?){4})$/,
     'card-expires-month': /^\d+$/,
     'card-expires-year': /^\d+$/
 };
+
+const CARD_TYPES = [
+    ' ',
+    'Visa',
+    'MasterCard',
+    'Discover',
+    'American Express'
+];
 
 const US_STATES = [
     ' ',
@@ -181,6 +190,15 @@ function onLoad() {
             innerText: state
         });
         selAddressState.appendChild(option);
+    }
+
+    let selCardType = byId('sel-card-type');
+    for (let type of CARD_TYPES) {
+        let option = constructElement('option', {
+            value: type,
+            innerText: type
+        });
+        selCardType.appendChild(option);
     }
 
     let selCardExpiresMonth = byId('sel-card-expires-month');

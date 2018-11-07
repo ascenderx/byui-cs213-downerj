@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE bsa SYSTEM "BSA.dtd">
+<bsa>
+    <!-- 
+    #####################################################
+    ## COUNCIL ##########################################
+    #####################################################
+    -->
+    <council name="">
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+    </council>
+
+    <!-- 
+    #####################################################
+    ## COUNCIL ##########################################
+    #####################################################
+    -->
+    <council name="">
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+    </council>
+
+    <!-- 
+    #####################################################
+    ## COUNCIL ##########################################
+    #####################################################
+    -->
+    <council name="">
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+
+        <!-- ## TROOP ################################### -->
+        <troop number="" unit="">
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname></firstname>
+                <lastname></lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+    </council>
+</bsa>

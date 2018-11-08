@@ -18,8 +18,8 @@
                     <state>NV</state>
                 </address>
                 <phone>702-001-0001</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
@@ -33,8 +33,11 @@
                     <state>NV</state>
                 </address>
                 <phone>702-001-0001</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
+                <rank date-earned="01/01/2005">Life</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -47,8 +50,9 @@
                     <state>NV</state>
                 </address>
                 <phone>702-001-0001</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -65,8 +69,8 @@
                     <state>NV</state>
                 </address>
                 <phone>702-002-0002</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -79,8 +83,10 @@
                     <state>NV</state>
                 </address>
                 <phone>702-003-0003</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -93,8 +99,8 @@
                     <state>NV</state>
                 </address>
                 <phone>702-004-0004</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -111,8 +117,9 @@
                     <state>NV</state>
                 </address>
                 <phone>702-005-0005</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -125,8 +132,10 @@
                     <state>NV</state>
                 </address>
                 <phone>702-006-0006</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -139,8 +148,10 @@
                     <state>NV</state>
                 </address>
                 <phone>702-007-0007</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -164,8 +175,10 @@
                     <state>ID</state>
                 </address>
                 <phone>208-001-0001</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -178,8 +191,10 @@
                     <state>ID</state>
                 </address>
                 <phone>208-002-0002</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -192,8 +207,10 @@
                     <state>ID</state>
                 </address>
                 <phone>208-003-0003</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -210,8 +227,9 @@
                     <state>ID</state>
                 </address>
                 <phone>208-004-0004</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -224,8 +242,10 @@
                     <state>ID</state>
                 </address>
                 <phone>208-005-0005</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -238,8 +258,10 @@
                     <state>ID</state>
                 </address>
                 <phone>208-006-0006</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -263,8 +285,11 @@
                     <state>CO</state>
                 </address>
                 <phone>719-001-0001</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
+                <rank date-earned="01/01/2005">Life</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -277,8 +302,10 @@
                     <state>CO</state>
                 </address>
                 <phone>719-002-0002</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -291,8 +318,11 @@
                     <state>CO</state>
                 </address>
                 <phone>719-003-0003</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
+                <rank date-earned="01/01/2003">First Class</rank>
+                <rank date-earned="01/01/2004">Star</rank>
+                <rank date-earned="01/01/2005">Life</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -309,8 +339,8 @@
                     <state>CO</state>
                 </address>
                 <phone>719-004-0004</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -323,8 +353,8 @@
                     <state>CO</state>
                 </address>
                 <phone>719-005-0005</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>
@@ -337,8 +367,8 @@
                     <state>CO</state>
                 </address>
                 <phone>719-006-0006</phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
+                <rank date-earned="01/01/2001">Tenderfoot</rank>
+                <rank date-earned="01/01/2002">Second Class</rank>
                 <meritbadge date-earned=""></meritbadge>
                 <meritbadge date-earned=""></meritbadge>
             </scout>

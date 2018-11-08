@@ -6,12 +6,12 @@
     ## COUNCIL ##########################################
     #####################################################
     -->
-    <council name="">
+    <council name="Las Vegas Area">
         <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
+        <troop number="500" unit="">
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Johnathan</firstname>
+                <lastname>Jingleheimer-Schmidt</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -25,8 +25,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Jacob</firstname>
+                <lastname>Jingleheimer-Schmidt</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -39,8 +39,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Jerry</firstname>
+                <lastname>Jingleheimer-Schmidt</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -55,10 +55,10 @@
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
+        <troop number="871" unit="">
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Walter</firstname>
+                <lastname>McIntyre</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -71,8 +71,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Seamus</firstname>
+                <lastname>McGahan</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -85,107 +85,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-        </troop>
-
-        <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-        </troop>
-    </council>
-
-    <!-- 
-    #####################################################
-    ## COUNCIL ##########################################
-    #####################################################
-    -->
-    <council name="">
-        <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
-                <address>
-                    <street></street>
-                    <city></city>
-                    <state></state>
-                </address>
-                <phone></phone>
-                <rank date-earned=""></rank>
-                <rank date-earned=""></rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-            </scout>
-            <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Matthew</firstname>
+                <lastname>Spencer</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -200,10 +101,10 @@
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
+        <troop number="224" unit="">
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Glenn</firstname>
+                <lastname>Tempelton</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -216,8 +117,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Grant</firstname>
+                <lastname>Cunningham</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -230,8 +131,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Lars</firstname>
+                <lastname>Müller</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -251,12 +152,12 @@
     ## COUNCIL ##########################################
     #####################################################
     -->
-    <council name="">
+    <council name="Grand Teton Council">
         <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
+        <troop number="303" unit="">
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Timothy</firstname>
+                <lastname>Dunn</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -269,8 +170,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Clark</firstname>
+                <lastname>Harrison</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -283,8 +184,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Flynn</firstname>
+                <lastname>Reynolds</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -299,10 +200,10 @@
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="" unit="">
+        <troop number="800" unit="">
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Andrew</firstname>
+                <lastname>Reid</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -315,8 +216,8 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Robert</firstname>
+                <lastname>Stone</lastname>
                 <address>
                     <street></street>
                     <city></city>
@@ -329,8 +230,107 @@
                 <meritbadge date-earned=""></meritbadge>
             </scout>
             <scout>
-                <firstname></firstname>
-                <lastname></lastname>
+                <firstname>Kyle</firstname>
+                <lastname>Wilkinson</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+    </council>
+
+    <!-- 
+    #####################################################
+    ## COUNCIL ##########################################
+    #####################################################
+    -->
+    <council name="Pikes Peak Council">
+        <!-- ## TROOP ################################### -->
+        <troop number="707" unit="">
+            <scout>
+                <firstname>Dylan</firstname>
+                <lastname>Robertson</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname>Charles</firstname>
+                <lastname>Fisher</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname>Alexander</firstname>
+                <lastname>Atkinson</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+        </troop>
+
+        <!-- ## TROOP ################################### -->
+        <troop number="714" unit="">
+            <scout>
+                <firstname>Connor</firstname>
+                <lastname>Webb</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname>Ryan</firstname>
+                <lastname>Harris</lastname>
+                <address>
+                    <street></street>
+                    <city></city>
+                    <state></state>
+                </address>
+                <phone></phone>
+                <rank date-earned=""></rank>
+                <rank date-earned=""></rank>
+                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned=""></meritbadge>
+            </scout>
+            <scout>
+                <firstname>Steven</firstname>
+                <lastname>Murray</lastname>
                 <address>
                     <street></street>
                     <city></city>

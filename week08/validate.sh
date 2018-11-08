@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xmllint --valid BSA.xml --dtdvalid BSA.dtd --noout
+xmllint --valid $1.xml --dtdvalid $1.dtd --noout

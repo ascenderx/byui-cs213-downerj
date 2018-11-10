@@ -8,7 +8,7 @@
     -->
     <council name="Las Vegas Area">
         <!-- ## TROOP ################################### -->
-        <troop number="500" unit="">
+        <troop number="500" unit="Henderson A">
             <scout>
                 <firstname>Johnathan</firstname>
                 <lastname>Jingleheimer-Schmidt</lastname>
@@ -20,9 +20,9 @@
                 <phone>702-001-0001</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Truck Transportation</meritbadge>
+                <meritbadge date-earned="1/1/1753">Programming</meritbadge>
+                <meritbadge date-earned="1/1/1753">Oceanography</meritbadge>
             </scout>
             <scout>
                 <firstname>Jacob</firstname>
@@ -38,8 +38,8 @@
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
                 <rank date-earned="01/01/2005">Life</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Pioneering</meritbadge>
+                <meritbadge date-earned="1/1/1753">Personal Fitness</meritbadge>
             </scout>
             <scout>
                 <firstname>Jerry</firstname>
@@ -53,13 +53,13 @@
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Pulp and Paper</meritbadge>
+                <meritbadge date-earned="1/1/1753">Plant Science</meritbadge>
             </scout>
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="871" unit="">
+        <troop number="871" unit="Henderson B">
             <scout>
                 <firstname>Walter</firstname>
                 <lastname>McIntyre</lastname>
@@ -71,8 +71,8 @@
                 <phone>702-002-0002</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Public Health</meritbadge>
+                <meritbadge date-earned="1/1/1753">American Business</meritbadge>
             </scout>
             <scout>
                 <firstname>Seamus</firstname>
@@ -87,8 +87,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">American Cultures</meritbadge>
+                <meritbadge date-earned="1/1/1753">Chess</meritbadge>
             </scout>
             <scout>
                 <firstname>Matthew</firstname>
@@ -101,13 +101,13 @@
                 <phone>702-004-0004</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Aviation</meritbadge>
+                <meritbadge date-earned="1/1/1753">Backpacking</meritbadge>
             </scout>
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="224" unit="">
+        <troop number="224" unit="Las Vegas A">
             <scout>
                 <firstname>Glenn</firstname>
                 <lastname>Tempelton</lastname>
@@ -120,8 +120,8 @@
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Bird Study</meritbadge>
+                <meritbadge date-earned="1/1/1753">Citizenship in the Nation</meritbadge>
             </scout>
             <scout>
                 <firstname>Grant</firstname>
@@ -136,8 +136,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Architecture</meritbadge>
+                <meritbadge date-earned="1/1/1753">Archery</meritbadge>
             </scout>
             <scout>
                 <firstname>Lars</firstname>
@@ -152,8 +152,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Aviation</meritbadge>
+                <meritbadge date-earned="1/1/1753">Dentistry</meritbadge>
             </scout>
         </troop>
     </council>
@@ -165,7 +165,7 @@
     -->
     <council name="Grand Teton Council">
         <!-- ## TROOP ################################### -->
-        <troop number="303" unit="">
+        <troop number="303" unit="Rexburg A">
             <scout>
                 <firstname>Timothy</firstname>
                 <lastname>Dunn</lastname>
@@ -179,8 +179,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Orienteering</meritbadge>
+                <meritbadge date-earned="1/1/1753">Radio</meritbadge>
             </scout>
             <scout>
                 <firstname>Clark</firstname>
@@ -195,8 +195,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Music</meritbadge>
+                <meritbadge date-earned="1/1/1753">Nuclear Science</meritbadge>
             </scout>
             <scout>
                 <firstname>Flynn</firstname>
@@ -211,13 +211,13 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Reading</meritbadge>
+                <meritbadge date-earned="1/1/1753">Safety</meritbadge>
             </scout>
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="800" unit="">
+        <troop number="800" unit="Idaho Falls A">
             <scout>
                 <firstname>Andrew</firstname>
                 <lastname>Reid</lastname>
@@ -230,8 +230,8 @@
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Rowing</meritbadge>
+                <meritbadge date-earned="1/1/1753">Sustainability</meritbadge>
             </scout>
             <scout>
                 <firstname>Robert</firstname>
@@ -246,8 +246,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Surveying</meritbadge>
+                <meritbadge date-earned="1/1/1753">Painting</meritbadge>
             </scout>
             <scout>
                 <firstname>Kyle</firstname>
@@ -262,8 +262,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Leatherwork</meritbadge>
+                <meritbadge date-earned="1/1/1753">Game Design</meritbadge>
             </scout>
         </troop>
     </council>
@@ -275,7 +275,7 @@
     -->
     <council name="Pikes Peak Council">
         <!-- ## TROOP ################################### -->
-        <troop number="707" unit="">
+        <troop number="707" unit="Colorado Springs A">
             <scout>
                 <firstname>Dylan</firstname>
                 <lastname>Robertson</lastname>
@@ -290,8 +290,8 @@
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
                 <rank date-earned="01/01/2005">Life</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Entrepreneurship</meritbadge>
+                <meritbadge date-earned="1/1/1753">Electricity</meritbadge>
             </scout>
             <scout>
                 <firstname>Charles</firstname>
@@ -306,8 +306,8 @@
                 <rank date-earned="01/01/2002">Second Class</rank>
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Electronics</meritbadge>
+                <meritbadge date-earned="1/1/1753">Emergency Preparedness</meritbadge>
             </scout>
             <scout>
                 <firstname>Alexander</firstname>
@@ -323,13 +323,13 @@
                 <rank date-earned="01/01/2003">First Class</rank>
                 <rank date-earned="01/01/2004">Star</rank>
                 <rank date-earned="01/01/2005">Life</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Athletics</meritbadge>
+                <meritbadge date-earned="1/1/1753">Cycling</meritbadge>
             </scout>
         </troop>
 
         <!-- ## TROOP ################################### -->
-        <troop number="714" unit="">
+        <troop number="714" unit="Colorado Springs B">
             <scout>
                 <firstname>Connor</firstname>
                 <lastname>Webb</lastname>
@@ -341,8 +341,8 @@
                 <phone>719-004-0004</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Crime Prevention</meritbadge>
+                <meritbadge date-earned="1/1/1753">Cooking</meritbadge>
             </scout>
             <scout>
                 <firstname>Ryan</firstname>
@@ -355,8 +355,8 @@
                 <phone>719-005-0005</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Chemistry</meritbadge>
+                <meritbadge date-earned="1/1/1753">Fire Safety</meritbadge>
             </scout>
             <scout>
                 <firstname>Steven</firstname>
@@ -369,8 +369,8 @@
                 <phone>719-006-0006</phone>
                 <rank date-earned="01/01/2001">Tenderfoot</rank>
                 <rank date-earned="01/01/2002">Second Class</rank>
-                <meritbadge date-earned=""></meritbadge>
-                <meritbadge date-earned=""></meritbadge>
+                <meritbadge date-earned="1/1/1753">Genealogy</meritbadge>
+                <meritbadge date-earned="1/1/1753">Metalwork</meritbadge>
             </scout>
         </troop>
     </council>

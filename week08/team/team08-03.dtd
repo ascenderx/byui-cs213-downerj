@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT playlist (trackList+)>
+<!ELEMENT trackList (track+)>
+<!ELEMENT track (title, location)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT location (#PCDATA)>

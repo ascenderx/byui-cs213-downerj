@@ -3,16 +3,16 @@
 <xsl:output method="xml" indent="yes" />
 
 <xsl:template match="/">
-<html>
-  <head>
-    <title>Teach 09: Problem 1</title>
-  </head>
-  <body>
-    <xsl:for-each select="classes/class">
-      <p><xsl:value-of select="." /></p>
-    </xsl:for-each>
-  </body>
-</html>
+  <html>
+    <head>
+      <title>Teach 09: Problem 1</title>
+    </head>
+    <body>
+      <xsl:for-each select="classes/class">
+        <p><xsl:value-of select="." /></p>
+      </xsl:for-each>
+    </body>
+  </html>
 </xsl:template>
 
 </xsl:stylesheet>

@@ -19,6 +19,12 @@
           color: #fff;
           padding: 5px;
         }
+        tbody tr:nth-child(odd) {
+          background-color: #fdd;
+        }
+        tbody tr:nth-child(even) {
+          background-color: #fff;
+        }
         td {
           border: 1px solid #000;
           padding: 5px;
@@ -28,9 +34,11 @@
     <body>
       <table>
         <thead>
-          <th>Name</th>
-          <th>Size</th>
-          <th>Type</th>
+          <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Type</th>
+          </tr>
         </thead>
         <tbody>
           <xsl:for-each select="directory/file">

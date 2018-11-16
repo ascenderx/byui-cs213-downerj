@@ -23,7 +23,7 @@
 <xsl:template match="bsa/council">
   <li>
     Council: <xsl:value-of select="@name" />
-    <ul>
+    <ul class="light-blue">
       <xsl:apply-templates select="troop" />
     </ul>
   </li>
@@ -32,7 +32,7 @@
 <xsl:template match="bsa/council/troop">
   <li>
     Troop #<xsl:value-of select="@number" />: <xsl:value-of select="@unit" />
-    <ul>
+    <ul class="white">
      <xsl:apply-templates select="scout" />
     </ul>
   </li>
@@ -41,11 +41,11 @@
 <xsl:template match="bsa/council/troop/scout">
   <li>
     <xsl:value-of select="lastname" />,&#160;<xsl:value-of select="firstname" />
-    <ul>
+    <ul class="light-blue">
       <li>Address:<xsl:apply-templates select="address" /></li>
       <li>Phone:&#160;<xsl:value-of select="phone" /></li>
       <li>Ranks:
-        <table>
+        <table class="white">
           <thead>
             <th>Title</th>
             <th>Date Earned</th>
@@ -56,7 +56,7 @@
         </table>
       </li>
       <li>Merit Badges:
-        <table>
+        <table class="white">
           <thead>
             <th>Title</th>
             <th>Date Earned</th>
@@ -71,7 +71,7 @@
 </xsl:template>
 
 <xsl:template match="bsa/council/troop/scout/address">
-  <ul>
+  <ul class="white">
     <li>Street:&#160;<xsl:value-of select="street" /></li>
     <li>City:&#160;<xsl:value-of select="city" /></li>
     <li>State:&#160;<xsl:value-of select="state" /></li>

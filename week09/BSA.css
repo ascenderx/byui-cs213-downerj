@@ -10,10 +10,16 @@ ul, table {
 
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 table th, table td {
   text-align: left;
+  padding: 3px 5px 3px 10px;
+}
+
+table th {
+  border-bottom: 3px solid #007;
 }
 
 ul {
@@ -26,4 +32,12 @@ ul li:before {
 
 .grow {
   width: 90%;
+}
+
+.light-blue {
+  background-color: #ddf;
+}
+
+.white {
+  background-color: #fff;
 }

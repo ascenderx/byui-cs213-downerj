@@ -164,7 +164,7 @@
     ## COUNCIL ##########################################
     #####################################################
     -->
-    <council name="Grand Teton Council">
+    <council name="Grand Teton">
         <!-- ## TROOP ################################### -->
         <troop number="303" unit="Rexburg A">
             <scout>
@@ -274,7 +274,7 @@
     ## COUNCIL ##########################################
     #####################################################
     -->
-    <council name="Pikes Peak Council">
+    <council name="Pikes Peak">
         <!-- ## TROOP ################################### -->
         <troop number="707" unit="Colorado Springs A">
             <scout>

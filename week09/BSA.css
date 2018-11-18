@@ -41,3 +41,8 @@ ul li:before {
 .white {
   background-color: #fff;
 }
+
+.u-expandable-clickable {
+  display: inline;
+  cursor: pointer;
+}

@@ -22,8 +22,8 @@
 
 <xsl:template match="bsa/council">
   <li>
-    Council: <xsl:value-of select="@name" />
-    <ul class="light-blue">
+    <div class="u-expandable-clickable">Council: <xsl:value-of select="@name" /></div>
+    <ul class="light-blue u-expandable">
       <xsl:apply-templates select="troop" />
     </ul>
   </li>
@@ -31,8 +31,10 @@
 
 <xsl:template match="bsa/council/troop">
   <li>
-    Troop #<xsl:value-of select="@number" />: <xsl:value-of select="@unit" />
-    <ul class="white">
+    <div class="u-expandable-clickable">
+      Troop #<xsl:value-of select="@number" />: <xsl:value-of select="@unit" />
+    </div>
+    <ul class="white u-expandable">
      <xsl:apply-templates select="scout" />
     </ul>
   </li>
@@ -40,12 +42,18 @@
 
 <xsl:template match="bsa/council/troop/scout">
   <li>
-    <xsl:value-of select="lastname" />,&#160;<xsl:value-of select="firstname" />
-    <ul class="light-blue">
-      <li>Address:<xsl:apply-templates select="address" /></li>
+    <div class="u-expandable-clickable">
+      <xsl:value-of select="lastname" />,&#160;<xsl:value-of select="firstname" />
+    </div>
+    <ul class="light-blue u-expandable">
+      <li>
+        <div class="u-expandable-clickable">Address:</div>
+        <div class="u-expandable"><xsl:apply-templates select="address" /></div>
+      </li>
       <li>Phone:&#160;<xsl:value-of select="phone" /></li>
-      <li>Ranks:
-        <table class="white">
+      <li>
+        <div class="u-expandable-clickable">Ranks:</div>
+        <table class="white u-expandable">
           <thead>
             <th>Title</th>
             <th>Date Earned</th>
@@ -55,8 +63,9 @@
           </tbody>
         </table>
       </li>
-      <li>Merit Badges:
-        <table class="white">
+      <li>
+        <div class="u-expandable-clickable">Merit Badges:</div>
+        <table class="white u-expandable">
           <thead>
             <th>Title</th>
             <th>Date Earned</th>

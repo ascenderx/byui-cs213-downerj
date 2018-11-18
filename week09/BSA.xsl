@@ -11,6 +11,8 @@
       <link rel="stylesheet" href="BSA.css" />
     </head>
     <body>
+      <button id="btExpandAll" onclick="expandAll();">Expand All</button>
+      <button id="btCollapseAll" onclick="collapseAll();">Collapse All</button>
       <ul>
         <xsl:apply-templates select="bsa/council" />
       </ul>
@@ -22,6 +24,7 @@
 
 <xsl:template match="bsa/council">
   <li>
+    <div class="u-expandable-icon"></div>
     <div class="u-expandable-clickable">Council: <xsl:value-of select="@name" /></div>
     <ul class="light-blue u-expandable">
       <xsl:apply-templates select="troop" />
@@ -31,6 +34,7 @@
 
 <xsl:template match="bsa/council/troop">
   <li>
+    <div class="u-expandable-icon"></div>
     <div class="u-expandable-clickable">
       Troop #<xsl:value-of select="@number" />: <xsl:value-of select="@unit" />
     </div>
@@ -42,16 +46,19 @@
 
 <xsl:template match="bsa/council/troop/scout">
   <li>
+    <div class="u-expandable-icon"></div>
     <div class="u-expandable-clickable">
       <xsl:value-of select="lastname" />,&#160;<xsl:value-of select="firstname" />
     </div>
     <ul class="light-blue u-expandable">
       <li>
+        <div class="u-expandable-icon"></div>
         <div class="u-expandable-clickable">Address:</div>
         <div class="u-expandable"><xsl:apply-templates select="address" /></div>
       </li>
       <li>Phone:&#160;<xsl:value-of select="phone" /></li>
       <li>
+        <div class="u-expandable-icon"></div>
         <div class="u-expandable-clickable">Ranks:</div>
         <table class="white u-expandable">
           <thead>
@@ -64,6 +71,7 @@
         </table>
       </li>
       <li>
+        <div class="u-expandable-icon"></div>
         <div class="u-expandable-clickable">Merit Badges:</div>
         <table class="white u-expandable">
           <thead>

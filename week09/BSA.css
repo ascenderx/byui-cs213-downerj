@@ -26,9 +26,9 @@ ul {
   list-style: none;
 }
 
-ul li:before {
+/* ul li:before {
   content: '+ ';
-}
+} */
 
 .grow {
   width: 90%;
@@ -43,6 +43,11 @@ ul li:before {
 }
 
 .u-expandable-clickable {
+  display: inline;
+  cursor: pointer;
+}
+
+.u-expandable-icon {
   display: inline;
   cursor: pointer;
 }

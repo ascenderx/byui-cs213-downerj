@@ -23,7 +23,7 @@
                 <li><a href="week07/index.html"><div class="button">Week 07<br /><sup>E-Commerce v3</sup></div></a></li>
                 <li><a href="week08/index.html"><div class="button">Week 08<br /><sup>?</sup></div></a></li>
                 <li><a href="week09/index.html"><div class="button">Week 09<br /><sup>XSLT</sup></div></a></li>
-                <li><a href="week10/index.html"><div class="button">Week 10</div></a></li>
+                <li><a href="week10/index.html"><div class="button">Week 10<br /><sup>AJAX & JSON</sup></div></a></li>
                 <li><a href="week11/index.html"><div class="button">Week 11</div></a></li>
                 <li><a href="week12/index.html"><div class="button">Week 12</div></a></li>
                 <li><a href="week13/index.html"><div class="button">Week 13</div></a></li>

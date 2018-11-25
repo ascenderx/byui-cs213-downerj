@@ -14,6 +14,14 @@ function constructElement(tagName, props) {
     return elem;
 }
 
+function br() {
+    return constructElement('br');
+}
+
+function hr() {
+    return constructElement('hr');
+}
+
 function toSentenceCase(text) {
     let result = text.charAt(0).toUpperCase();
 
@@ -24,7 +32,8 @@ function toSentenceCase(text) {
     return result;
 }
 
-let frmMain;
+let frmCountries;
+let frmCities;
 let cityList;
 
 function loadCountryList(fileName) {
@@ -43,7 +52,8 @@ function loadCountryList(fileName) {
 
 function loadCityList(countryName, fileName) {
     let labelOuter = constructElement('label'); 
-    let radio = constructElement('radio', {
+    let radio = constructElement('input', {
+        type: 'radio',
         name: 'country',
         value: countryName
     });
@@ -53,6 +63,9 @@ function loadCityList(countryName, fileName) {
 
     labelOuter.appendChild(radio);
     labelOuter.appendChild(labelInner);
+    labelOuter.appendChild(br());
+
+    frmCountries.appendChild(labelOuter);
 
     cityList[countryName] = [];
     ajaxGet(fileName)
@@ -68,8 +81,38 @@ function loadCityList(countryName, fileName) {
     });
 }
 
+function onCountryChange() {
+    frmCities.innerHTML = '';
+
+    let country = frmCountries.elements['country'].value;
+    let cities = cityList[country];
+
+    for (let city of cities) {
+        if (!city) {
+            return;
+        }
+
+        let labelOuter = constructElement('label');
+        let check = constructElement('input', {
+            type: 'checkbox',
+            name: 'cities',
+            value: city
+        });
+        let labelInner = constructElement('label', {
+            innerText: city
+        });
+
+        labelOuter.appendChild(check);
+        labelOuter.appendChild(labelInner);
+        labelOuter.appendChild(br());
+
+        frmCities.appendChild(labelOuter);
+    }
+}
+
 function onWindowLoad() {
-    frmMain = byID('frm-main');
+    frmCountries = byID('frm-countries');
+    frmCities = byID('frm-cities');
     cityList = {};
     
     loadCountryList('countries.json');

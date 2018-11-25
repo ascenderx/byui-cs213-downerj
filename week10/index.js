@@ -35,12 +35,13 @@ function toSentenceCase(text) {
 let frmCountries;
 let frmCities;
 let divPopulations;
+let countryFiles;
 let cityList;
 
 function loadCountryList(fileName) {
     ajaxGet(fileName)
     .then((text) => {
-        let countryFiles = JSON.parse(text);
+        countryFiles = JSON.parse(text);
         
         for (let name in countryFiles) {
             loadCityList(name, countryFiles[name]);
@@ -73,7 +74,7 @@ function loadCityList(countryName, fileName) {
     .then((text) => {
         let lines = text.split(/\n/);
         for (let line of lines) {
-            let city = line.split(/\s+/)[0];
+            let city = line.split(/\s\s+/)[0];
             cityList[countryName].push(city);
         }
     })
@@ -142,7 +143,40 @@ function onQuery(country) {
         }
     }
 
-    console.log(cities);
+    let fileName = countryFiles[country];
+    ajaxGet(fileName)
+    .then((text) => {
+        text = text.trim();
+        if (!text) {
+            return;
+        }
+        
+        let lines = text.split(/\n/);
+        let ul = constructElement('ul');
+        for (let line of lines) {
+            if (!line) {
+                continue;
+            }
+
+            let city = line.split(/\s\s+/);
+            let name = city[0];
+            let pop = city[1];
+
+            if (cities.indexOf(name) < 0) {
+                continue;
+            }
+
+            let li = constructElement('li', {
+                innerText: `${name}: ${pop}`
+            });
+            ul.appendChild(li);
+        }
+
+        divPopulations.appendChild(ul);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 }
 
 function onWindowLoad() {

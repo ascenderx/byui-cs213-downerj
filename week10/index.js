@@ -34,6 +34,7 @@ function toSentenceCase(text) {
 
 let frmCountries;
 let frmCities;
+let divPopulations;
 let cityList;
 
 function loadCountryList(fileName) {
@@ -82,6 +83,10 @@ function loadCityList(countryName, fileName) {
 }
 
 function onCountryChange() {
+    // cleanup
+    for (let elem of frmCities.children) {
+        elem.remove();
+    }
     frmCities.innerHTML = '';
 
     let country = frmCountries.elements['country'].value;
@@ -89,7 +94,7 @@ function onCountryChange() {
 
     for (let city of cities) {
         if (!city) {
-            return;
+            continue;
         }
 
         let labelOuter = constructElement('label');
@@ -108,11 +113,42 @@ function onCountryChange() {
 
         frmCities.appendChild(labelOuter);
     }
+
+    let btQuery = constructElement('button', {
+        type: 'button',
+        id: 'bt-query',
+        innerText: 'Query'
+    });
+    btQuery.addEventListener('click', () => {
+        onQuery(country);
+    });
+    frmCities.appendChild(btQuery);
+}
+
+function onQuery(country) {
+    // cleanup
+    for (let elem of divPopulations.children) {
+        elem.remove();
+    }
+    divPopulations.innerText = '';
+
+    let cities = [];
+    for (let elem of frmCities.children) {
+        if (elem.tagName === 'LABEL') {
+            let chkbox = elem.children[0];
+            if (chkbox.checked) {
+                cities.push(chkbox.value);
+            }
+        }
+    }
+
+    console.log(cities);
 }
 
 function onWindowLoad() {
     frmCountries = byID('frm-countries');
     frmCities = byID('frm-cities');
+    divPopulations = byID('div-populations');
     cityList = {};
     
     loadCountryList('countries.json');

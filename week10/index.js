@@ -121,18 +121,19 @@ function onCountryChange() {
         innerText: 'Query'
     });
     btQuery.addEventListener('click', () => {
-        onQuery(country);
+        onCountryQuery(country);
     });
     frmCities.appendChild(btQuery);
 }
 
-function onQuery(country) {
-    // cleanup
+function clearPopulationsList() {
     for (let elem of divPopulations.children) {
         elem.remove();
     }
     divPopulations.innerText = '';
+}
 
+function onCountryQuery(country) {
     let cities = [];
     for (let elem of frmCities.children) {
         if (elem.tagName === 'LABEL') {
@@ -146,6 +147,8 @@ function onQuery(country) {
     let fileName = countryFiles[country];
     ajaxGet(fileName)
     .then((text) => {
+        clearPopulationsList();
+
         text = text.trim();
         if (!text) {
             return;
@@ -175,17 +178,64 @@ function onQuery(country) {
         divPopulations.appendChild(ul);
     })
     .catch((err) => {
+        clearPopulationsList();
+        console.error(err);
+    });
+}
+
+let txtStudentsFile;
+let tableStudents;
+
+function clearStudentTable() {
+    for (let elem of tableStudents.tBodies[0].children) {
+        elem.remove();
+    }
+    tableStudents.tBodies[0].innerText = '';
+}
+
+function onStudentsQuery() {
+    let fileName = txtStudentsFile.value;
+    ajaxGet(fileName)
+    .then((text) => {
+        let data = JSON.parse(text);
+        clearStudentTable();
+        
+        for (let student of data.students) {
+            let row = tableStudents.tBodies[0].insertRow();
+            let cellNameLast = row.insertCell();
+            let cellNameFirst = row.insertCell();
+            let cellAddrCity = row.insertCell();
+            let cellAddrState = row.insertCell();
+            let cellAddrZip = row.insertCell();
+            let cellMajor = row.insertCell();
+            let cellGPA = row.insertCell();
+
+            cellNameLast.innerText = student.last;
+            cellNameFirst.innerText = student.first;
+            cellAddrCity.innerText = student.address.city;
+            cellAddrState.innerText = student.address.state;
+            cellAddrZip.innerText = student.address.zip;
+            cellMajor.innerText = student.major;
+            cellGPA.innerText = student.gpa;
+        }
+    })
+    .catch((err) => {
+        clearStudentTable();
         console.error(err);
     });
 }
 
 function onWindowLoad() {
+    // part 1
     frmCountries = byID('frm-countries');
     frmCities = byID('frm-cities');
     divPopulations = byID('div-populations');
     cityList = {};
-    
     loadCountryList('countries.json');
+
+    // part 2
+    txtStudentsFile = byID('txt-students-file');
+    tableStudents = byID('table-students');
 }
 
 window.addEventListener('load', onWindowLoad);

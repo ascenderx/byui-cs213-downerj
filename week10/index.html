@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
     </head>
     <body>
+        <h2>Part 1: Populations</h2>
         <form id="frm-countries" oninput="onCountryChange()">
         </form>
         <hr />
@@ -13,6 +14,31 @@
         <hr />
         <div id="div-populations">
         </div>
+
+        <h2>Part 2: Students</h2>
+        <form id="frm-students">
+            <input type="text" id="txt-students-file" />
+            <button type="button" id="bt-query-students" onclick="onStudentsQuery()">Query</button>
+        </form>
+        <table id="table-students">
+            <thead>
+                <tr>
+                    <th colspan="2" valign="top">Name</th>
+                    <th colspan="3" valign="top">Address</th>
+                    <th rowspan="2" valign="top">Major</th>
+                    <th rowspan="2" valign="top">GPA</th>
+                </tr>
+                <tr>
+                    <th valign="top">Last</th>
+                    <th valign="top">First</th>
+                    <th valign="top">City</th>
+                    <th valign="top">State</th>
+                    <th valign="top">Zip</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
 
         <script type="application/javascript" src="ajax.js"></script>
         <script type="application/javascript" src="index.js"></script>

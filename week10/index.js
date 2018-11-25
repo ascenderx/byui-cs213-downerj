@@ -197,9 +197,20 @@ function onStudentsQuery() {
     let fileName = txtStudentsFile.value;
     ajaxGet(fileName)
     .then((text) => {
-        let data = JSON.parse(text);
+        if (!text) {
+            return;
+        }
+
         clearStudentTable();
-        
+
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (err) {
+            console.log(err);
+            return;
+        }
+
         for (let student of data.students) {
             let row = tableStudents.tBodies[0].insertRow();
             let cellNameLast = row.insertCell();
@@ -235,6 +246,7 @@ function onWindowLoad() {
 
     // part 2
     txtStudentsFile = byID('txt-students-file');
+    txtStudentsFile.value = 'json.txt';
     tableStudents = byID('table-students');
 }
 

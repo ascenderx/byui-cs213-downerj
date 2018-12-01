@@ -1,21 +1,9 @@
 <?php
+  require("utils.php");
+
   // get params
   $x = htmlspecialchars($_POST["x"]);
   $n = htmlspecialchars($_POST["n"]);
-
-  /**
-   * FAIL
-   * Sends an error response to the client as a separate page,
-   * halting PHP evaluation in the process.
-   * @param code    The HTTP status/error code
-   * @param message The error message to display
-   */
-  function fail($code, $message) {
-    http_response_code($code);
-    header("Content-Type: text/html");
-    echo($message);
-    exit();
-  }
 
   // assert that the params are numeric and parse them as integers
   if (!is_numeric($x)) {

@@ -1,7 +1,7 @@
 <?php
   session_start();
   
-  require('modules/utils.php');
+  require('./modules/utils.php');
 
   $reqMethod = $_SERVER["REQUEST_METHOD"];
   if ($reqMethod !== "POST") {
@@ -24,5 +24,6 @@
 
   $_SESSION["store-items"] = $storeItems;
 
-  endWithJSONObject(200, $_SESSION);
+  // endWithJSONObject(200, $_SESSION);
+  redirect("./browse.php");
 ?>

@@ -1,0 +1,30 @@
+{
+    "830235": {
+        "sku": "830235",
+        "name": "Lines from Heaven",
+        "description": "\"But soft, what light through yonder window breaks?\" — W. Shakespeare",
+        "imageURL": "art1.png",
+        "price": 1002001203.03045654
+    },
+    "802493": {
+        "sku": "802493",
+        "name": "Rainbow Juice",
+        "description": "Best known as unicorn tears",
+        "imageURL": "art2.png",
+        "price": 20.00
+    },
+    "900000": {
+        "sku": "900000",
+        "name": "Colorful Circles",
+        "description": "They're basically universe frisbees",
+        "imageURL": "art4.png",
+        "price": 40.00
+    },
+    "303030": {
+        "sku": "303030",
+        "name": "Tree Fractal",
+        "description": "The noblest of branch-like manifestations",
+        "imageURL": "treefract.png",
+        "price": 200.00
+    }
+}

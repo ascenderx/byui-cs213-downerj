@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Press Start 2P Regular';
+    src: url('assets/fonts/PressStart2P-Regular.ttf');
+}
+@font-face {
+    font-family: 'Joystix Mono Regular';
+    src: url('assets/fonts/joystix_monospace.ttf');
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+.u-meta-container {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+
+.u-container {
+    border: 1px solid #fff;
+    border-top: 6px solid #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.u-heading-1 {
+    font-size: 34px;
+}
+
+.u-heading-2 {
+    font-size: 24px;
+}
+
+.u-heading-3 {
+    font-size: 20px;
+}
+
+.u-heading-1, .u-heading-2, .u-heading-3, button {
+    font-family: 'Joystix Mono Regular';
+}
+
+.u-pull-left {
+    float: left;
+}
+
+.u-pull-right {
+    float: right;
+}
+
+.table-user-info td {
+    padding-right: 10px;
+}
+
+.u-input-small {
+    width: 50px;
+}
+
+.u-required:after {
+    color: #f00;
+    font-weight: bold;
+    content: ' *';
+}
+
+.u-align-top {
+  vertical-align: top;
+}
+
+.u-price {
+  color: #ff0;
+}
+
+.u-no-show {
+  display: none;
+}
+
+button {
+    background-color: #000;
+    border: 2px solid #fa0;
+    color: #fa0;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+button:hover, button:focus {
+    background-color: #fa0;
+    color: #000;
+    cursor: pointer;
+}
+
+button[disabled], button[disabled]:hover, button[disabled]:focus {
+    color: #aaa;
+    border: 2px solid #aaa;
+    background-color: #000;
+    cursor: default;
+}
+
+img {
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+hr {
+    border: 1px solid #fff;
+}
+
+input[type=text], select {
+    border: 1px solid #0af;
+    background-color: #000;
+    padding: 5px;
+    color: #0af;
+    font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+input[type=text]:hover, select:hover {
+    background-color: #023;
+}
+
+input[type=text]:focus, select:focus {
+    background-color: #046;
+}
+
+select {
+    width: 100%;
+}
+
+a, a:visited {
+    color: #0aa;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #0ff;
+}

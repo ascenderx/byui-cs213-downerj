@@ -60,7 +60,7 @@
 
                   <label for="sku">
                     SKU&mdash;<?=$item->sku ?>
-                    <input type="text" disabled="true" name="sku" class="u-no-show" value="<?=$item->sku ?>" />
+                    <input type="text" name="sku" class="u-no-show" value="<?=$item->sku ?>" />
                   </label>
                   <br />
 

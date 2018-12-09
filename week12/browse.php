@@ -71,8 +71,11 @@
                   </label>
                   <br /><br />
                   
-                  <button type="submit" formaction="./add-item.php">Add To Cart</button>
-                  <button type="submit" formaction="./remove-item.php">Remove From Cart</button>
+                  <?php if ($item->count <= 0): ?>
+                    <button type="submit" formaction="./add-item.php">Add To Cart</button>
+                  <?php else: ?>
+                    <button type="submit" formaction="./remove-item.php">Remove From Cart</button>
+                  <?php endif; ?>
                 </form>
               </td>
             </tr>

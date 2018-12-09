@@ -26,7 +26,9 @@
   }
 
   $totalItems = 0;
+  $cartTotal = 0.00;
   foreach ($storeItems as $sku => $item) {
     $totalItems += $item->count;
+    $cartTotal += $item->count * $item->price;
   }
 } ?>

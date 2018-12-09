@@ -65,9 +65,7 @@
                   <br />
 
                   <label class="u-price">
-                    $<?php
-                      echo(number_format($item->price, 2, ".", ","));
-                    ?>
+                    $<?php echo(number_format($item->price, 2, ".", ",")); ?>
                   </label>
                   <br /><br />
                   
@@ -83,13 +81,5 @@
         </table>
       </div>
     </div>
-
-    <!-- <script type="application/javascript" src="./modules/utils.js"></script> -->
-    <!-- <script type="application/javascript" src="./modules/ajax.js"></script> -->
-    <!-- <script type="application/javascript" src="./modules/product.js"></script> -->
-    <!-- <script type="application/javascript" src="./modules/shoppingcart.js"></script> -->
-    <!-- <script type="application/javascript" src="./modules/webstorage.js"></script> -->
-    <!-- <script type="application/javascript" src="./modules/resourcemanage.js"></script> -->
-    <!-- <script type="application/javascript" src="./browse.js"></script> -->
   </body>
 </html>

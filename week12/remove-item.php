@@ -27,5 +27,5 @@
   $_SESSION["store-items"] = $storeItems;
 
   // endWithJSONObject(200, $_SESSION);
-  redirect("./browse.php");
+  redirect("./cart.php");
 ?>

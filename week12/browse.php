@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  require('./modules/resourcemanage.php');
+  require("./modules/resourcemanage.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,11 +9,11 @@
   <head>
     <!-- details -->
     <title>Downertech | Art Gallery</title>
-    <?php require('./modules/metadata.php'); ?>
+    <?php require("./modules/metadata.php"); ?>
   </head>
   <body>
     <div class="u-meta-container">
-      <?php require('./modules/top-header.php'); ?>
+      <?php require("./modules/top-header.php"); ?>
 
       <div class="u-container">
         <span class="u-pull-left">

@@ -252,8 +252,10 @@ function onSubmitClick() {
   let answer = confirm(`Finalize purchase?`);
   if (answer) {
     session.submitting = true;
-    byId('frm-main').submit();
+    return true;
   }
+
+  return false;
 }
 
 window.addEventListener('beforeunload', onUnload);

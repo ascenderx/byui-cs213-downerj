@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  require('./modules/resourcemanage.php');
+  require("./modules/resourcemanage.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,11 +9,11 @@
   <head>
     <!-- details -->
     <title>Downertech | Checkout</title>
-    <?php require('./modules/metadata.php'); ?>
+    <?php require("./modules/metadata.php"); ?>
   </head>
   <body onload="onLoad();">
     <div class="u-meta-container">
-      <?php require('./modules/top-header.php'); ?>
+      <?php require("./modules/top-header.php"); ?>
 
       <div class="u-container">
         <span class="u-pull-left">
@@ -105,7 +105,7 @@
         </table>
 
         <br />
-        <button type="button" id="bt-submit" onclick="onSubmitClick();" formaction="./process-payment.php">Submit Payment</button>
+        <button type="submit" id="bt-submit" onclick="return onSubmitClick();" formaction="./process-payment.php">Submit Payment</button>
         <button type="button" id="bt-reset" onclick="onResetClick();">Reset</button>
         </form>
       </div>
